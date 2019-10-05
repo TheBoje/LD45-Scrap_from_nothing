@@ -27,8 +27,7 @@ public class UIFarmingScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        begining_text();
-        StartCoroutine(StartCountdown(30));
+        StartCoroutine(StartCountdown(105));
         print_life();
     }
 
@@ -39,21 +38,6 @@ public class UIFarmingScript : MonoBehaviour
         lifeP2.text = player_2.GetComponent<RobotHP>().health.ToString();
     }
 
-    // Texte de début
-    public void begining_text()
-    {
-        beginText.text = "READY ?";
-        StartCoroutine(Sleep(10));
-        beginText.text = "GO";
-        StartCoroutine(Sleep(10));
-        beginText.text = "";
-    }
-
-    // sleep le temps désigné
-    public IEnumerator Sleep(float sec)
-    {
-        yield return new WaitForSeconds(sec);
-    }
 
     // Gère le compteur    
     public IEnumerator StartCountdown(float countdownValue = 90)
@@ -61,11 +45,24 @@ public class UIFarmingScript : MonoBehaviour
         currCountdownValue = countdownValue;
         while (currCountdownValue > 0)
         {
-            Debug.Log("Countdown: " + currCountdownValue);
+            //Debug.Log("Countdown: " + currCountdownValue);
             yield return new WaitForSeconds(1.0f);
             currCountdownValue--;
 
-        timer.text = currCountdownValue.ToString();
+            timer.text = currCountdownValue.ToString();
+
+            if(currCountdownValue == 104)
+            {
+                beginText.text = "READY ?";
+            }
+            else if(currCountdownValue == 100)
+            {
+                beginText.text = "GO !";
+            }
+            else if(currCountdownValue < 100)
+            {
+                beginText.text = "";
+            }
         }
                  
     }
