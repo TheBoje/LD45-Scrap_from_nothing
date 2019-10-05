@@ -17,7 +17,7 @@ public class ItemFollow : MonoBehaviour
         {
             if (collision.tag == "Player")
             {if(Target)
-                { Target    .GetComponent<RobotMovement>().followed = false;
+                { Target.GetComponent<RobotMovement>().followed = false;
                 }
                 Target = collision.gameObject;
                 collision.GetComponent<RobotMovement>().followed = true;
