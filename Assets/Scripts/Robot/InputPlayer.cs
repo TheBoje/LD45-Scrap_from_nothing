@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(RobotMovement))]
 public class InputPlayer : MonoBehaviour
 {
     public int playerNumber;
