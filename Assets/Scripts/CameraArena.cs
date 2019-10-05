@@ -4,60 +4,40 @@ using UnityEngine;
 
 public class CameraArena : MonoBehaviour
 {
+    [SerializeField]private List<GameObject> players;
 
-    [SerializeField]
-    private GameObject player_1;
-    [SerializeField]
-    private GameObject player_2;
+    private Vector3 averagePos;
+    private float averageDist;
 
-    private int zPos = -10;
-    private Vector3 pos = new Vector3(0, 0, -10);
+    [SerializeField] private Vector3 offset;
+    [SerializeField] private float minDist;
+    [SerializeField] private float maxDist;
 
-    private const float firstSizeX = 5.0f;
-    private const float firstDistX = 11.0f;
-    private const float firstSizeY = 10.0f;
-    private const float firstDistY = 11.0f;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        transform.position = average_pos_players();
-
-
-
-        this.GetComponent<Camera>().orthographicSize = camera_size();
-        //(firstSize * Vector3.Distance(player_1.transform.position, player_2.transform.position)) / firstDist
-    }
-
-    public Vector3 average_pos_players()
-    {
-        return (player_1.transform.position + player_2.transform.position) / 2 + pos;
-    }
-
-    public float camera_size()
-    {
-        float distX = Mathf.Abs(player_1.transform.position.x - player_2.transform.position.x);
-        float distY = Mathf.Abs(player_1.transform.position.y - player_2.transform.position.y);
-
-        if(distX > distY)
+        averagePos = Vector3.zero;
+        foreach (GameObject g in players)
         {
-            Debug.Log("distX > distY : " + distX);
-            return ((firstSizeX * distX) / firstDistX);
+            averagePos += g.transform.position;
+            averageDist += Vector3.Distance(averagePos, g.transform.position);
         }
-        else
-        {
-            Debug.Log("distX < distY : " + distY);
-            return ((firstSizeY * distY) / firstDistY);
-        }
+        averagePos /= players.Count;
+        averageDist /= players.Count;
 
+        transform.position = averagePos + offset;
+
+        averageDist = ClampValue(averageDist, minDist, maxDist);
+
+        GetComponent<Camera>().orthographicSize = averageDist;
     }
 
-    // Update is called once per frame
-    void Update()
+    float ClampValue(float value, float min, float max)
     {
-        transform.position = (player_1.transform.position + player_2.transform.position) / 2 + pos;
-        this.GetComponent<Camera>().orthographicSize = camera_size();
-
-
+        if (value < min)
+            return min;
+        if (value > max)
+            return max;
+        return value;
     }
 }
