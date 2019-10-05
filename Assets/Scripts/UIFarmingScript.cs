@@ -6,22 +6,16 @@ using UnityEngine.UI;
 public class UIFarmingScript : MonoBehaviour
 {
 
-    [SerializeField]
-    private Text timer;
-    [SerializeField]
-    private Text lifeP1;
-    [SerializeField]
-    private Text lifeP2;
-    [SerializeField]
-    private Text beginText;
+    [SerializeField] private Text timer;
+    [SerializeField] private Text lifeP1;
+    [SerializeField] private Text lifeP2;
+    [SerializeField] private Text beginText;
 
 
     private float currCountdownValue;
 
-    [SerializeField]
-    private GameObject player_1;
-    [SerializeField]
-    private GameObject player_2;
+    [SerializeField] private GameObject player_1;
+    [SerializeField] private GameObject player_2;
 
 
     // Start is called before the first frame update

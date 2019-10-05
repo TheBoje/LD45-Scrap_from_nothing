@@ -259,6 +259,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128091076}
   m_CullTransparentMesh: 0
+--- !u!1 &197462458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3006532801272752090, guid: c5b4dc7a83510074dbe379275e2f02c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1696174793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &197462459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197462458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caeb22583789b14cb96482d24d3f651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  initHeal: 0
+  resistance: 0
+--- !u!114 &197462460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197462458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60544a4e62dd9f54992dda887988e274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nom: Robot_2
+  marque: 
+  vie: 100
+  vitesse: 1
+  resistance: 1
+  rotationVitesse: 1
+  nombreArme: 0
+  arme1Type: 
+  arme1Degats: 0
+  arme1Portee: 0
+  arme1VitesseProj: 0
+  arme1Cadence: 0
+  arme2Type: 
+  arme2Degats: 0
+  arme2Portee: 0
+  arme2VitesseProj: 0
+  arme2Cadence: 0
+  possedeProtection: 0
+  protectionType: 
+  protectionAngle: 0
+  protectionEtat: 0
+  "protectionDurabilit\xE9": 0
+  Followed: 0
 --- !u!4 &197462466 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3006532801272752070, guid: c5b4dc7a83510074dbe379275e2f02c4,
@@ -1070,6 +1126,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d938c4e6be1df8044885aec0f996ca18, type: 3}
+--- !u!1 &1055834930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4548796374399732024, guid: 4afc0e7dd19257f4c899b9552068cd82,
+    type: 3}
+  m_PrefabInstance: {fileID: 385267779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1055834931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055834930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caeb22583789b14cb96482d24d3f651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  initHeal: 0
+  resistance: 0
+--- !u!114 &1055834932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055834930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60544a4e62dd9f54992dda887988e274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nom: Robot_1
+  marque: 
+  vie: 100
+  vitesse: 1
+  resistance: 1
+  rotationVitesse: 1
+  nombreArme: 0
+  arme1Type: 
+  arme1Degats: 0
+  arme1Portee: 0
+  arme1VitesseProj: 0
+  arme1Cadence: 0
+  arme2Type: 
+  arme2Degats: 0
+  arme2Portee: 0
+  arme2VitesseProj: 0
+  arme2Cadence: 0
+  possedeProtection: 0
+  protectionType: 
+  protectionAngle: 0
+  protectionEtat: 0
+  "protectionDurabilit\xE9": 0
+  Followed: 0
 --- !u!4 &1055834938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4548796374399732004, guid: 4afc0e7dd19257f4c899b9552068cd82,
@@ -1896,8 +2008,8 @@ MonoBehaviour:
   lifeP1: {fileID: 1658783819}
   lifeP2: {fileID: 684289588}
   beginText: {fileID: 1349576746}
-  player_1: {fileID: 0}
-  player_2: {fileID: 0}
+  player_1: {fileID: 1055834930}
+  player_2: {fileID: 197462458}
 --- !u!1001 &3704969074123578054
 PrefabInstance:
   m_ObjectHideFlags: 0
