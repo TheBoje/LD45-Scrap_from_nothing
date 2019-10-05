@@ -194,8 +194,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  slerpTime: 0
-  robotStats: {fileID: 0}
+  speedMulti: 1
+  slerpTime: 1
+  slerpMulti: 1
   input: {x: 0, y: 0}
 --- !u!114 &4192418181769178378
 MonoBehaviour:
