@@ -7,7 +7,6 @@ public class Bullet : MonoBehaviour
     public float portee;
     public float speed;
     public float damage;
-    public TypeArme type;
 
     private Rigidbody2D rb;
 

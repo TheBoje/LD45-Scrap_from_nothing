@@ -55,12 +55,14 @@ public class Workbench : MonoBehaviour
             {
                 player.GetComponent<RobotModules>().arme1 = modules[modules.Count - 1];
                 modules[modules.Count - 1].transform.parent = player.transform;
+                modules[modules.Count - 1].GetComponent<Module>().equiped = true;
                 modules.RemoveAt(modules.Count - 1);
             }
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 player.GetComponent<RobotModules>().arme2 = modules[modules.Count - 1];
                 modules[modules.Count - 1].transform.parent = player.transform;
+                modules[modules.Count - 1].GetComponent<Module>().equiped = true;
                 modules.RemoveAt(modules.Count - 1);
             }
         }
@@ -69,6 +71,7 @@ public class Workbench : MonoBehaviour
         {
             player.GetComponent<RobotModules>().propulseur = modules[modules.Count - 1];
             modules[modules.Count - 1].transform.parent = player.transform;
+            modules[modules.Count - 1].GetComponent<Module>().equiped = true;
             modules.RemoveAt(modules.Count - 1);
         }
         //Protection
@@ -76,6 +79,7 @@ public class Workbench : MonoBehaviour
         {
             player.GetComponent<RobotModules>().protection = modules[modules.Count - 1];
             modules[modules.Count - 1].transform.parent = player.transform;
+            modules[modules.Count - 1].GetComponent<Module>().equiped = true;
             modules.RemoveAt(modules.Count - 1);
         }
     }

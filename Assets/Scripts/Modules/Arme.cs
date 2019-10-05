@@ -2,20 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Définition du type énuméré relatif au type de l'arme
-public enum TypeArme { feu, laser, explosion, balistique }  //Les armes de corps à corps seront dans une autre classe
-
 public class Arme : Module {
     //Donnés d'équipement de l'arme
-    public TypeArme type;              // Type de l'arme (feu, laser, explosion ou balistique)
     public int damage;                 // Dégats de l'arme (10 -> réduit de 10 hp, quand résistance = 1)
     public float portee;               // Facteur de portée de l'arme (défaut = 1)
     public float vitesseProjectile;    // Facteur de vitesse des projectiles de l'arme (défaut = 1)
     public float cadance;              // Facteur de cadence de tir de l'arme (défaut = 1)
-    public Color rarete;
 
     //Autres variables nécéssaires
-    [SerializeField] private GameObject bullet;
+    public GameObject bullet;          //Définira le type de l'arme
     private float currentTime;         // Pour cadancer l'arme
     [SerializeField] private Transform canon;
 

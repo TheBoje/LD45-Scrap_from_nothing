@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ProceduralModuleGeneration : MonoBehaviour
 {
-    public GameObject prefabModule;
+    public GameObject prefabArme;
+    public GameObject prefabProp;
     [Header("Valeur Pour les armes")]
     [SerializeField] private Vector2Int damageBounds;
     [SerializeField] private Vector2 porteeBounds;
     [SerializeField] private Vector2 vitessBounds;
     [SerializeField] private Vector2 cadanceBounds;
+    [SerializeField] List<GameObject> bullets;
 
     [Header("Valeur Pour les propulseur")]
     [SerializeField] private Vector2Int speedBounds;
@@ -26,8 +28,11 @@ public class ProceduralModuleGeneration : MonoBehaviour
         Arme arme = new Arme();
         //random
         arme.damage = (int)Random.Range(damageBounds[0], damageBounds[1]);
+        arme.portee = Random.Range(porteeBounds[0], porteeBounds[1]);
         arme.vitesseProjectile = Random.Range(vitessBounds[0], vitessBounds[1]);
         arme.cadance = Random.Range(cadanceBounds[0], cadanceBounds[1]);
+
+        arme.bullet = bullets[(int)Random.Range(0, bullets.Count)];
 
         //definition de la rarete
         float averageValue = (arme.damage + arme.portee + arme.vitesseProjectile + arme.cadance) / 4;
@@ -80,5 +85,30 @@ public class ProceduralModuleGeneration : MonoBehaviour
             prop.rarete = full;
         }
         return prop;
+    }
+
+    public void CreateModuleObject(Vector3 pos, string type)
+    {
+        if(type == "Arme")
+        {
+            GameObject mod = GameObject.Instantiate(prefabArme, pos, Quaternion.identity);
+            Arme a = GenerateArme();
+            mod.GetComponent<Arme>().damage = a.damage;
+            mod.GetComponent<Arme>().portee = a.portee;
+            mod.GetComponent<Arme>().vitesseProjectile = a.vitesseProjectile;
+            mod.GetComponent<Arme>().cadance = a.cadance;
+            mod.GetComponent<Arme>().rarete = a.rarete;
+            mod.GetComponent<Arme>().bullet = a.bullet;
+
+
+        }
+        else if(type == "Propulseur")
+        {
+            GameObject mod = GameObject.Instantiate(prefabProp, pos, Quaternion.identity);
+            Propulseur p = GeneratePropulseur();
+            mod.GetComponent<Propulseur>().speedMultiplicator = p.speedMultiplicator;
+            mod.GetComponent<Propulseur>().speedRotaMultiplicator = p.speedRotaMultiplicator;
+            mod.GetComponent<Propulseur>().rarete = p.rarete;
+        }
     }
 }

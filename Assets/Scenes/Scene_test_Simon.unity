@@ -206,6 +206,62 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &390420641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 390420643}
+  - component: {fileID: 390420642}
+  m_Layer: 0
+  m_Name: ProcGen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &390420642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390420641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607289a167de3aa4486da7e60a53aaf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabArme: {fileID: 0}
+  prefabProp: {fileID: 0}
+  damageBounds: {x: 1, y: 15}
+  porteeBounds: {x: 20, y: 100}
+  vitessBounds: {x: 10, y: 80}
+  cadanceBounds: {x: 0.01, y: 3}
+  bullets: []
+  speedBounds: {x: 0, y: 0}
+  slerpBounds: {x: 0, y: 0}
+  quarter: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+  half: {r: 0.3507031, g: 0.65221673, b: 0.6698113, a: 0}
+  halfAndQuarter: {r: 0.02647741, g: 0.8018868, b: 0.06459155, a: 0}
+  full: {r: 0.8490566, g: 0.63966787, b: 0.244304, a: 0}
+--- !u!4 &390420643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390420641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.784442, y: 0.01610877, z: -9.971851}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &484895918
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,11 +295,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Gun
   equiped: 0
+  rarete: {r: 0, g: 0, b: 0, a: 0}
   damage: 1
   portee: 50
   vitesseProjectile: 40
   cadance: 0.01
-  rarete: {r: 0, g: 0, b: 0, a: 0}
   bullet: {fileID: 7242760475781270729, guid: d3e079369531bee4f8efc88a0c084e7c, type: 3}
   canon: {fileID: 1841277299}
 --- !u!61 &484895920
@@ -334,11 +390,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Gun
   equiped: 0
+  rarete: {r: 0, g: 0, b: 0, a: 0}
   damage: 10
   portee: 25
   vitesseProjectile: 20
   cadance: 0.5
-  rarete: {r: 0, g: 0, b: 0, a: 0}
   bullet: {fileID: 3218024791049376178, guid: c75ba54e955f65c4d9537a8a03e7f30c, type: 3}
   canon: {fileID: 1181491266}
 --- !u!61 &631797687
@@ -541,7 +597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841277298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 484895921}
