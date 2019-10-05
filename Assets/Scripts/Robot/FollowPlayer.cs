@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayer : MonoBehaviour
-{
+public class FollowPlayer : MonoBehaviour {
     public Transform player;
+    public float smoothFactor = 0.1f;
     public Vector3 offset;
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position = player.position + offset;
+
+    private void FixedUpdate () {
+        Vector3 desiredPosition = player.transform.position + offset;
+        Vector3 smoothedPosition = Vector3.Lerp (transform.position, desiredPosition, smoothFactor);
+        transform.position = smoothedPosition;
     }
+
 }
