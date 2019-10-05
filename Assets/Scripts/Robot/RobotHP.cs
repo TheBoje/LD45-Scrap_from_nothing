@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class RobotHP : MonoBehaviour
 {
     public float health;
     public float initHeal;

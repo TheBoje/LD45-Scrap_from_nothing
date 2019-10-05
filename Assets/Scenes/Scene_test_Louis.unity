@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 128091079}
   - component: {fileID: 128091078}
   m_Layer: 5
-  m_Name: Image
+  m_Name: CoeurP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -586,7 +586,7 @@ GameObject:
   - component: {fileID: 594086209}
   - component: {fileID: 594086208}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: CoeurP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1234,7 +1234,7 @@ GameObject:
   - component: {fileID: 1065020595}
   - component: {fileID: 1065020594}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageFond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1942,6 +1942,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d991f548491c264981da18682faf6a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 1264634577}
+  lifeP1: {fileID: 1658783819}
+  lifeP2: {fileID: 684289588}
+  player_1: {fileID: 206201583}
+  player_2: {fileID: 289817503}
 --- !u!1001 &3704969074123578054
 PrefabInstance:
   m_ObjectHideFlags: 0
