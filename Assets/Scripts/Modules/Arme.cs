@@ -7,11 +7,11 @@ public enum TypeArme { feu,laser,explosion,balistique}; //Les armes de corp à c
 public class Arme : Module
 {
     //Donnés d'équipement de l'arme
-    public TypeArme type;
     public int damage;
     public float portee;
     public float vitesseProjectile;
     public float cadance;
+    public Color rarete;
 
     //Autres variables nécéssaires
     [SerializeField]private GameObject bullet;  
