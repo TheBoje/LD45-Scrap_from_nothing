@@ -143,4 +143,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  offset_aux: {x: 0, y: 0, z: 0}
+  distMax: 1.25
+  Speed: 2.5
