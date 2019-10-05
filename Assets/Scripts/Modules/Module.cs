@@ -7,6 +7,6 @@ public class Module : MonoBehaviour
 {
     public string name;
     public bool equiped;
-    public void Act() { }
-    
+    public virtual void Act() { }
+
 }
