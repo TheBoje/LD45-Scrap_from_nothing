@@ -740,6 +740,7 @@ GameObject:
   - component: {fileID: 635306967}
   - component: {fileID: 635306966}
   - component: {fileID: 635306965}
+  - component: {fileID: 635306964}
   m_Layer: 0
   m_Name: Diamond
   m_TagString: Module
@@ -747,6 +748,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &635306964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635306963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67456b1da97211b40a2b7e1a3a4374ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  Followed: 0
+  distMax: 2
+  Speed: 2.5
 --- !u!61 &635306965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1019,6 +1036,11 @@ PrefabInstance:
         type: 3}
       propertyPath: smoothFactor
       value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958226568685544818, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 85378995, guid: a088e95bbf761774d826771957828852, type: 3}
       propertyPath: antialiasingMode
@@ -1942,6 +1964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d991f548491c264981da18682faf6a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 0}
 --- !u!1001 &3704969074123578054
 PrefabInstance:
   m_ObjectHideFlags: 0

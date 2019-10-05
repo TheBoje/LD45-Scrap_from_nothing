@@ -6,18 +6,21 @@ public class ItemFollow : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject Target; // ciblage du Player que l'item doit suivre 
-    public bool Followed = false;// savoir si le pplayer est suivie
+    private GameObject Target;          // Ciblage du Player que l'item doit suivre 
+    public bool Followed = false;       // Savoir si le player est suivie
     
-    private Vector3 Direction;// direction que suis L'item
+    
+    private Vector3 Direction;          // Direction que suis l'item
 
-    private void OnTriggerEnter2D(Collider2D collision) // test sur la natur de l'bojet et si il est un player alors Target le prend comme objet
+    private void OnTriggerEnter2D(Collider2D collision)     // Test sur la natur de l'bojet et si il est un player alors Target le prend comme objet
     {
         if (!collision.GetComponent<RobotMovement>().followed)
         {
             if (collision.tag == "Player")
-            {if(Target)
-                { Target    .GetComponent<RobotMovement>().followed = false;
+            {
+                if(Target)
+                { 
+                    Target.GetComponent<RobotMovement>().followed = false;
                 }
                 Target = collision.gameObject;
                 collision.GetComponent<RobotMovement>().followed = true;
@@ -26,21 +29,19 @@ public class ItemFollow : MonoBehaviour
         
     }
 
-    [SerializeField]private float distMax = 1.25f; // distance entre le Player et L'item
-    [SerializeField] private float Speed = 2.5f; // vitesse a la quelle l'titem suis le joueur
+    [SerializeField]private float distMax;           // Distance entre le Player et L'item
+    [SerializeField]private float Speed;             // Vitesse à la quelle l'item suis le joueur
 
 
 
-    void Update()
+    private void FixedUpdate()
     {
-        if (Target != null)// attente que un cible soit prise par un objet ( l'bojet resteras en place)
+        if (Target != null)                                                                         // Attente que un cible soit prise par un objet ( l'bojet resteras en place)
         {
-            Direction = Target.transform.position - transform.position; //calcul de la direction 
-            if ( Vector3.Distance(Target.transform.position, transform.position) > distMax) //test  de la distance entre l'objet et l'item
+            Direction = Target.transform.position - transform.position;                             // Calcul de la direction 
+            if ( Vector3.Distance(Target.transform.position, transform.position) > distMax)
             {
-
-                transform.Translate(Direction * Time.deltaTime * Speed ); //deplacement de l'objet en fonction de la direction du temp et de la vitesse
-
+                transform.Translate(Direction * Time.deltaTime * Speed );                           // Deplacement de l'objet en fonction de la direction du temp et de la vitesse
             }
         }
 
