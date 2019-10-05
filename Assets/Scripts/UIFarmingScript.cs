@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIFarmingScript : MonoBehaviour
 {
+
+    [SerializeField]
+    private Text timer;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +25,11 @@ public class UIFarmingScript : MonoBehaviour
                 Debug.Log("Countdown: " + currCountdownValue);
                 yield return new WaitForSeconds(1.0f);
                 currCountdownValue--;
+
+            timer.text = currCountdownValue.ToString();
             }
+
+           
         }
 
     // Update is called once per frame
