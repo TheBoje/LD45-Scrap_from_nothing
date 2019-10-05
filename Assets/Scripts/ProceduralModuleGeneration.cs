@@ -63,6 +63,22 @@ public class ProceduralModuleGeneration : MonoBehaviour
         float averageValue = (prop.speedMultiplicator + prop.speedRotaMultiplicator) / 2;
         averageValue = averageValue * 100 / ((speedBounds[1] + slerpBounds[1]) / 2);
 
+        if (averageValue <= 25)
+        {
+            prop.rarete = quarter;
+        }
+        else if (averageValue <= 50)
+        {
+            prop.rarete = half;
+        }
+        else if (averageValue <= 75)
+        {
+            prop.rarete = halfAndQuarter;
+        }
+        else
+        {
+            prop.rarete = full;
+        }
         return prop;
     }
 }
