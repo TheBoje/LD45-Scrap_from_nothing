@@ -18,7 +18,10 @@ public class ItemFollow : MonoBehaviour
         }
     }
 
-    [SerializeField]private float distMax;
+    [SerializeField]private float distMax = 1.25f;
+    [SerializeField] private float Speed = 2.5f;
+
+
 
     void Update()
     {
@@ -28,7 +31,7 @@ public class ItemFollow : MonoBehaviour
             if ( Vector3.Distance(Target.transform.position, transform.position) > distMax)
             {
 
-                transform.Translate(Direction * Time.deltaTime);
+                transform.Translate(Direction * Time.deltaTime * Speed );
 
             }
         }
