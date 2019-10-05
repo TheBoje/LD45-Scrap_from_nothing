@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class DurabilityScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float durabilité;
+    private float durabilitéMax;
+
+    private Module mod;
+
+    private void Awake()
     {
-        
+        mod = GetComponent<Module>();
+        durabilitéMax = durabilité;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (!mod.equiped)
+            return;
+        if(collision.tag == "Bullet")
+        {
+            durabilité -= collision.GetComponent<Bullet>().damage;
+            if(durabilité <= 0)
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 }
