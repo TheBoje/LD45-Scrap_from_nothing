@@ -6,36 +6,34 @@ public class ItemFollow : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject player_1;
-    [SerializeField]
-    private GameObject player_2;
-    public Vector3 offset_aux = new Vector3(0, 0, 0);
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(this.tag == "item_pick_p1")
-        {
-            transform.position = player_1.transform.position + offset_aux;
-            Debug.Log(player_1.transform.position);
-        }
-        else if(this.tag == "item_pick_p2")
-        {
-            transform.position = player_2.transform.position + offset_aux;
-        }
-        ;
-    }
+    private GameObject Target;
+    
+    private Vector3 Direction;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        switch(collision.tag)
+        if (collision.tag == "Player")
         {
-            case "player_1" :
-                this.tag = "item_pick_p1";
-                    break;
-            case "player_2":
-                this.tag = "item_pick_p2";
-                break;
+            Target = collision.gameObject;
         }
     }
+
+    [SerializeField]private float distMax;
+
+    void Update()
+    {
+        if (Target != null)
+        {
+            Direction = Target.transform.position - transform.position;
+            if ( Vector3.Distance(Target.transform.position, transform.position) > distMax)
+            {
+
+                transform.Translate(Direction * Time.deltaTime);
+
+            }
+        }
+
+
+    }
+
 }
