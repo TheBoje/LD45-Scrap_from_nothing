@@ -9,8 +9,9 @@ public class RobotMovement : MonoBehaviour
 {
     //Vitesse initial du robot, 
     public float speed;
+    public float speedMulti = 1;
     public float slerpTime;
-    public RobotStats robotStats;
+    public float slerpMulti = 1;
 
 
     //Contien les deux axes du joueur, est modifier par le script InputPlayer
@@ -25,14 +26,13 @@ public class RobotMovement : MonoBehaviour
 
     private void Update()
     {
-        robotStats = gameObject.GetComponent<RobotStats>();
-        rb.velocity = input * (speed * robotStats.vitesse);     // Applique le multiplicateur de vitesse au robot
+        rb.velocity = input * (speed * speedMulti);     // Applique le multiplicateur de vitesse au robot
 
         if(input != Vector2.zero)
         {
             float angle = Mathf.Atan2(input.normalized.y, input.normalized.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            // transform.rotation = Quaternion.Slerp(angle, Vector3.forward, (slerpTime * robotStats.rotationVitesse)); 
+
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(angle, Vector3.forward), slerpTime * slerpMulti);
         }
 
     }

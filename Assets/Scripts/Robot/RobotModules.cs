@@ -16,6 +16,13 @@ public class RobotModules : MonoBehaviour
     public Transform leftModulePivot;
     public Transform frontModulePivot;
 
+    private RobotMovement rM;
+
+    private void Awake()
+    {
+        rM = GetComponent<RobotMovement>();
+    }
+
     private void Update()
     {
         if (arme1)
@@ -34,6 +41,8 @@ public class RobotModules : MonoBehaviour
         {
             propulseur.transform.position = backModulePivot.position;
             propulseur.transform.rotation = backModulePivot.rotation;
+            rM.speedMulti = propulseur.GetComponent<Propulseur>().speedMultiplicator;
+            rM.slerpMulti = propulseur.GetComponent<Propulseur>().speedRotaMultiplicator;
 
         }
 
