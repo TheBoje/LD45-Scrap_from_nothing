@@ -4,35 +4,40 @@ using UnityEngine;
 
 public class RobotModules : MonoBehaviour
 {
-    public GameObject backModule;
-    public GameObject rightModule;
-    public GameObject leftModule;
+    public GameObject arme1;
+    public GameObject arme2;
+    public GameObject protection;
+    public GameObject propulseur;
+
+    [Header("Pivot")]
 
     public Transform backModulePivot;
     public Transform rightModulePivot;
     public Transform leftModulePivot;
+    public Transform frontModulePivot;
 
     private void Update()
     {
-        if (backModule)
+        if (arme1)
         {
-            backModule.transform.position = backModulePivot.position;
-            backModule.transform.rotation = backModulePivot.rotation;
+            arme1.transform.position = rightModulePivot.position;
+            arme1.transform.rotation = rightModulePivot.rotation;
 
         }
-        if (rightModule)
+        if (arme2)
         {
 
-            rightModule.transform.position = rightModulePivot.position;
-            rightModule.transform.rotation = rightModulePivot.rotation;
+            arme2.transform.position = leftModulePivot.position;
+            arme2.transform.rotation = leftModulePivot.rotation;
         }
-        if (leftModule)
+        if (propulseur)
         {
-            leftModule.transform.position = leftModulePivot.position;
-            leftModule.transform.rotation = leftModulePivot.rotation;
+            propulseur.transform.position = backModulePivot.position;
+            propulseur.transform.rotation = backModulePivot.rotation;
 
         }
 
     }
+    
 
 }

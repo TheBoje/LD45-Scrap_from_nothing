@@ -48,19 +48,34 @@ public class Workbench : MonoBehaviour
             return;
         }
         Debug.Log("Equip?");
-        if (Input.GetKeyDown(KeyCode.Q))
+        //Arme
+        if(modules[modules.Count - 1].GetComponent<Arme>())
         {
-            player.GetComponent<RobotModules>().leftModule = modules[modules.Count - 1];
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                player.GetComponent<RobotModules>().arme1 = modules[modules.Count - 1];
+                modules[modules.Count - 1].transform.parent = player.transform;
+                modules.RemoveAt(modules.Count - 1);
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                player.GetComponent<RobotModules>().arme2 = modules[modules.Count - 1];
+                modules[modules.Count - 1].transform.parent = player.transform;
+                modules.RemoveAt(modules.Count - 1);
+            }
+        }
+        //Propulseur
+        if (Input.GetKeyDown(KeyCode.Z) && modules[modules.Count - 1].GetComponent<Propulseur>())
+        {
+            player.GetComponent<RobotModules>().propulseur = modules[modules.Count - 1];
+            modules[modules.Count - 1].transform.parent = player.transform;
             modules.RemoveAt(modules.Count - 1);
         }
-        if (Input.GetKeyDown(KeyCode.Z))
+        //Protection
+        if (Input.GetKeyDown(KeyCode.S) && modules[modules.Count - 1].GetComponent<Protection>())
         {
-            player.GetComponent<RobotModules>().backModule = modules[modules.Count - 1];
-            modules.RemoveAt(modules.Count - 1);
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            player.GetComponent<RobotModules>().rightModule = modules[modules.Count - 1];
+            player.GetComponent<RobotModules>().protection = modules[modules.Count - 1];
+            modules[modules.Count - 1].transform.parent = player.transform;
             modules.RemoveAt(modules.Count - 1);
         }
     }
