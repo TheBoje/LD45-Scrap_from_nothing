@@ -12,6 +12,8 @@ public class UIFarmingScript : MonoBehaviour
     private Text lifeP1;
     [SerializeField]
     private Text lifeP2;
+    [SerializeField]
+    private Text beginText;
 
 
     private float currCountdownValue;
@@ -25,7 +27,8 @@ public class UIFarmingScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(StartCountdown());
+        begining_text();
+        StartCoroutine(StartCountdown(30));
         print_life();
     }
 
@@ -34,6 +37,22 @@ public class UIFarmingScript : MonoBehaviour
     {
         lifeP1.text = player_1.GetComponent<RobotHP>().health.ToString();
         lifeP2.text = player_2.GetComponent<RobotHP>().health.ToString();
+    }
+
+    // Texte de début
+    public void begining_text()
+    {
+        beginText.text = "READY ?";
+        StartCoroutine(Sleep(10));
+        beginText.text = "GO";
+        StartCoroutine(Sleep(10));
+        beginText.text = "";
+    }
+
+    // sleep le temps désigné
+    public IEnumerator Sleep(float sec)
+    {
+        yield return new WaitForSeconds(sec);
     }
 
     // Gère le compteur    
