@@ -32,8 +32,8 @@ public class UIFarmingScript : MonoBehaviour
     // Affiche les points de vie de chaque players
     public void print_life()
     {
-        lifeP1.text = player_1.GetComponent<RobotStats>().vie.ToString();
-        lifeP2.text = player_2.GetComponent<RobotStats>().vie.ToString();
+        lifeP1.text = player_1.GetComponent<RobotHP>().health.ToString();
+        lifeP2.text = player_2.GetComponent<RobotHP>().health.ToString();
     }
 
     // Gère le compteur    

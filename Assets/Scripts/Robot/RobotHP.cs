@@ -13,7 +13,7 @@ public class RobotHP : MonoBehaviour
     {
         mod = GetComponent<Module>();
 
-
+        initHeal = GetComponent<RobotStats>().vie;
         health = initHeal ; // defition de la vie par la vie de base plus varleur armur qui s'ajoute 
     }
 
