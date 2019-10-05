@@ -8,4 +8,9 @@ public class Module : MonoBehaviour {
     public virtual void Act () { }
     public Color rarete;
 
+    public void SetColor()
+    {
+        transform.GetChild(0).GetComponent<SpriteRenderer>().color = rarete;
+    }
+
 }

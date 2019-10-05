@@ -11,10 +11,10 @@ public class ProceduralModuleGeneration : MonoBehaviour
     [SerializeField] private Vector2 porteeBounds;
     [SerializeField] private Vector2 vitessBounds;
     [SerializeField] private Vector2 cadanceBounds;
-    [SerializeField] List<GameObject> bullets;
+    [SerializeField] private List<GameObject> bullets;
 
     [Header("Valeur Pour les propulseur")]
-    [SerializeField] private Vector2Int speedBounds;
+    [SerializeField] private Vector2 speedBounds;
     [SerializeField] private Vector2 slerpBounds;
 
     [Header("Couleur de rareté")]
@@ -32,12 +32,12 @@ public class ProceduralModuleGeneration : MonoBehaviour
         arme.vitesseProjectile = Random.Range(vitessBounds[0], vitessBounds[1]);
         arme.cadance = Random.Range(cadanceBounds[0], cadanceBounds[1]);
 
-        arme.bullet = bullets[(int)Random.Range(0, bullets.Count)];
+        arme.bullet = bullets[(int)Random.Range(0, bullets.Count - 1)];
 
         //definition de la rarete
         float averageValue = (arme.damage + arme.portee + arme.vitesseProjectile + arme.cadance) / 4;
 
-        averageValue = averageValue * 100 / (damageBounds[1] + porteeBounds[1] + vitessBounds[1] + cadanceBounds[1]);
+        averageValue = averageValue * 100 / ((damageBounds[1] + porteeBounds[1] + vitessBounds[1] + cadanceBounds[1])/2);
 
         if(averageValue <= 25)
         {
@@ -91,6 +91,7 @@ public class ProceduralModuleGeneration : MonoBehaviour
     {
         if(type == "Arme")
         {
+            Debug.Log("Generate Arme");
             GameObject mod = GameObject.Instantiate(prefabArme, pos, Quaternion.identity);
             Arme a = GenerateArme();
             mod.GetComponent<Arme>().damage = a.damage;
@@ -99,16 +100,19 @@ public class ProceduralModuleGeneration : MonoBehaviour
             mod.GetComponent<Arme>().cadance = a.cadance;
             mod.GetComponent<Arme>().rarete = a.rarete;
             mod.GetComponent<Arme>().bullet = a.bullet;
+            mod.GetComponent<Arme>().SetColor();
 
 
         }
         else if(type == "Propulseur")
         {
+            Debug.Log("Generate Propulseur");
             GameObject mod = GameObject.Instantiate(prefabProp, pos, Quaternion.identity);
             Propulseur p = GeneratePropulseur();
             mod.GetComponent<Propulseur>().speedMultiplicator = p.speedMultiplicator;
             mod.GetComponent<Propulseur>().speedRotaMultiplicator = p.speedRotaMultiplicator;
             mod.GetComponent<Propulseur>().rarete = p.rarete;
+            mod.GetComponent<Propulseur>().SetColor();
         }
     }
 }
