@@ -8,7 +8,6 @@ public class UIFarmingScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = this.getChild("Compteur");
          StartCoroutine(StartCountdown());
    
     }
