@@ -33,5 +33,5 @@ public class RobotStats : MonoBehaviour {
     public int protectionAngle;         // Angle de la protection, ex = 45°
     public int protectionEtat;          // 1 = Intact, 0 = Détruit 
     public int protectionDurabilité;    // Multiplicateur de durabilité de la protection (1 = défaut)
-
+    public bool Followed = false;       // savoir si le pplayer est suivie
 }

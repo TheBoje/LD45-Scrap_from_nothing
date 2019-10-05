@@ -7,15 +7,21 @@ public class ItemFollow : MonoBehaviour
 
     [SerializeField]
     private GameObject Target; // ciblage du Player que l'item doit suivre 
+    public bool Followed = false;// savoir si le pplayer est suivie
     
     private Vector3 Direction;// direction que suis L'item
 
     private void OnTriggerEnter2D(Collider2D collision) // test sur la natur de l'bojet et si il est un player alors Target le prend comme objet
     {
-        if (collision.tag == "Player")
+        if (Target == null && !collision.GetComponent<RobotMovement>().followed)
         {
-            Target = collision.gameObject;
+            if (collision.tag == "Player")
+            {
+                Target = collision.gameObject;
+                collision.GetComponent<RobotMovement>().followed = true;
+            }
         }
+        
     }
 
     [SerializeField]private float distMax = 1.25f; // distance entre le Player et L'item
