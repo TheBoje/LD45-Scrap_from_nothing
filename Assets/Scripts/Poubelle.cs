@@ -41,12 +41,12 @@ public class Poubelle : MonoBehaviour
             return;
         Debug.Log("DeEquip?");
         //Arme
-
         if (player.GetComponent<RobotModules>().arme1 != null && Input.GetKeyDown(KeyCode.D))
         {
             GameObject g = player.GetComponent<RobotModules>().arme1;
             player.GetComponent<RobotModules>().arme1 = null;
             g.transform.position = output.position;
+            g.transform.parent = null;
 
         }
         if (player.GetComponent<RobotModules>().arme2 && Input.GetKeyDown(KeyCode.Q))
@@ -54,6 +54,7 @@ public class Poubelle : MonoBehaviour
             GameObject g = player.GetComponent<RobotModules>().arme2;
             player.GetComponent<RobotModules>().arme2 = null;
             g.transform.position = output.position;
+            g.transform.parent = null;
 
         }
         //Propulseur
@@ -62,6 +63,7 @@ public class Poubelle : MonoBehaviour
             GameObject g = player.GetComponent<RobotModules>().propulseur;
             player.GetComponent<RobotModules>().propulseur = null;
             g.transform.position = output.position;
+            g.transform.parent = null;
 
         }
         //Protection
@@ -70,6 +72,7 @@ public class Poubelle : MonoBehaviour
             GameObject g = player.GetComponent<RobotModules>().protection;
             player.GetComponent<RobotModules>().protection = null;
             g.transform.position = output.position;
+            g.transform.parent = null;
         }
     }
 }
