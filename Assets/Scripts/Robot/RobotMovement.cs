@@ -13,6 +13,7 @@ public class RobotMovement : MonoBehaviour
     public float slerpTime;
     public float slerpMulti = 1;
 
+    private bool Followed = false;   // savoir si le pplayer est suivie
 
     //Contien les deux axes du joueur, est modifier par le script InputPlayer
     [HideInInspector]public Vector2 input;
@@ -36,4 +37,12 @@ public class RobotMovement : MonoBehaviour
         }
 
     }
+    
+    public bool followed
+    {
+        get { return Followed; }
+        set { Followed = value; }
+    }
+
+
 }

@@ -32,7 +32,7 @@ public class ProceduralModuleGeneration : MonoBehaviour
         arme.vitesseProjectile = Random.Range(vitessBounds[0], vitessBounds[1]);
         arme.cadance = Random.Range(cadanceBounds[0], cadanceBounds[1]);
 
-        arme.bullet = bullets[(int)Random.Range(0, bullets.Count - 1)];
+        arme.bullet = bullets[(int)Random.Range(0, bullets.Count)];
 
         //definition de la rarete
         float averageValue = (arme.damage + arme.portee + arme.vitesseProjectile + arme.cadance) / 4;

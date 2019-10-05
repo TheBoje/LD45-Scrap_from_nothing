@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 3074143693356513938}
   - component: {fileID: 3074143693356513933}
   - component: {fileID: 3074143693356513936}
+  - component: {fileID: 5566226000181102240}
   m_Layer: 0
   m_Name: Arme
   m_TagString: Module
@@ -205,3 +206,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "durabilit\xE9": 20
+--- !u!114 &5566226000181102240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3074143693356513932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67456b1da97211b40a2b7e1a3a4374ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  Followed: 0
+  distMax: 1.25
+  Speed: 2.5

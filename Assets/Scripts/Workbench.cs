@@ -53,33 +53,57 @@ public class Workbench : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.D))
             {
+                if (player.GetComponent<RobotModules>().arme1 != null)
+                {
+                    Destroy(player.GetComponent<RobotModules>().arme1.gameObject);
+                }
                 player.GetComponent<RobotModules>().arme1 = modules[modules.Count - 1];
                 modules[modules.Count - 1].transform.parent = player.transform;
                 modules[modules.Count - 1].GetComponent<Module>().equiped = true;
+                modules[modules.Count - 1].GetComponent<ItemFollow>().enabled = false;
+                player.GetComponent<RobotMovement>().followed = false;
                 modules.RemoveAt(modules.Count - 1);
             }
             if (Input.GetKeyDown(KeyCode.Q))
             {
+                if (player.GetComponent<RobotModules>().arme2 != null)
+                {
+                    Destroy(player.GetComponent<RobotModules>().arme2.gameObject);
+                }
                 player.GetComponent<RobotModules>().arme2 = modules[modules.Count - 1];
                 modules[modules.Count - 1].transform.parent = player.transform;
                 modules[modules.Count - 1].GetComponent<Module>().equiped = true;
+                modules[modules.Count - 1].GetComponent<ItemFollow>().enabled = false;
+                player.GetComponent<RobotMovement>().followed = false;
                 modules.RemoveAt(modules.Count - 1);
             }
         }
         //Propulseur
         if (Input.GetKeyDown(KeyCode.Z) && modules[modules.Count - 1].GetComponent<Propulseur>())
         {
+            if(player.GetComponent<RobotModules>().propulseur != null)
+            {
+                Destroy(player.GetComponent<RobotModules>().propulseur.gameObject);
+            }
             player.GetComponent<RobotModules>().propulseur = modules[modules.Count - 1];
             modules[modules.Count - 1].transform.parent = player.transform;
             modules[modules.Count - 1].GetComponent<Module>().equiped = true;
+            modules[modules.Count - 1].GetComponent<ItemFollow>().enabled = false;
+            player.GetComponent<RobotMovement>().followed = false;
             modules.RemoveAt(modules.Count - 1);
         }
         //Protection
         if (Input.GetKeyDown(KeyCode.S) && modules[modules.Count - 1].GetComponent<Protection>())
         {
+            if (player.GetComponent<RobotModules>().protection != null)
+            {
+                Destroy(player.GetComponent<RobotModules>().protection.gameObject);
+            }
             player.GetComponent<RobotModules>().protection = modules[modules.Count - 1];
             modules[modules.Count - 1].transform.parent = player.transform;
             modules[modules.Count - 1].GetComponent<Module>().equiped = true;
+            modules[modules.Count - 1].GetComponent<ItemFollow>().enabled = false;
+            player.GetComponent<RobotMovement>().followed = false;
             modules.RemoveAt(modules.Count - 1);
         }
     }
