@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: dd8b9f325f30bec47816c023bdbdd530
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Urban Inline
+  fontNames:
+  - Urban Inline
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 00ac338f8f41f794eb24fe045608d18d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

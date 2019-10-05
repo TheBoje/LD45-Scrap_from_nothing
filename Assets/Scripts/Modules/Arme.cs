@@ -10,7 +10,7 @@ public class Arme : Module {
     public float cadance;              // Facteur de cadence de tir de l'arme (défaut = 1)
 
     //Autres variables nécéssaires
-    public GameObject bullet;          //Définira le type de l'arme
+    public GameObject bullet;          // Définira le type de l'arme
     private float currentTime;         // Pour cadancer l'arme
     [SerializeField] private Transform canon;
 
