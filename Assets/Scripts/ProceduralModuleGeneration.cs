@@ -91,7 +91,6 @@ public class ProceduralModuleGeneration : MonoBehaviour
     {
         if(type == "Arme")
         {
-            Debug.Log("Generate Arme");
             GameObject mod = GameObject.Instantiate(prefabArme, pos, Quaternion.identity);
             Arme a = GenerateArme();
             mod.GetComponent<Arme>().damage = a.damage;
@@ -106,7 +105,6 @@ public class ProceduralModuleGeneration : MonoBehaviour
         }
         else if(type == "Propulseur")
         {
-            Debug.Log("Generate Propulseur");
             GameObject mod = GameObject.Instantiate(prefabProp, pos, Quaternion.identity);
             Propulseur p = GeneratePropulseur();
             mod.GetComponent<Propulseur>().speedMultiplicator = p.speedMultiplicator;

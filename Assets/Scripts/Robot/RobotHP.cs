@@ -7,7 +7,6 @@ public class RobotHP : MonoBehaviour
     public float health;
     public float initHeal;
     public float resistance;
-    private Module mod;
 
     private void Awake()
     {
@@ -24,8 +23,6 @@ public class RobotHP : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!mod.equiped)
-            return;
         if (collision.tag == "Bullet")
         {
             health -= collision.GetComponent<Bullet>().damage * 1/resistance;

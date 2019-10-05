@@ -10,6 +10,8 @@ public class Bullet : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    public GameObject owner;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
