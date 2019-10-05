@@ -27,19 +27,16 @@ public class Arme : Module
     public override void Act()
     {
         base.Act();
-        if (currentTime + cadance >= Time.time)  //On ne peut pas encore attaquer
+        if (currentTime + cadance < Time.time)  //On ne peut pas encore attaquer
         {
-            WaitForCadance();
+
+            GameObject bul = GameObject.Instantiate(bullet, canon.position, transform.rotation);
+            bul.GetComponent<Bullet>().portee = portee;
+            bul.GetComponent<Bullet>().speed = vitesseProjectile;
+            currentTime = Time.time;
+
         }
 
-        GameObject bul = GameObject.Instantiate(bullet, canon.position, transform.rotation, transform);
-        bul.GetComponent<Bullet>().portee = portee;
-        bul.GetComponent<Bullet>().speed = vitesseProjectile;
-
     }
-
-    IEnumerator WaitForCadance()
-    {
-        yield return new WaitForSeconds((currentTime + cadance) - Time.time);
-    }
+    
 }

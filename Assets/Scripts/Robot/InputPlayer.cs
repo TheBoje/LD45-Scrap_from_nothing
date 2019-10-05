@@ -24,11 +24,11 @@ public class InputPlayer : MonoBehaviour
         rM.input = new Vector2(Input.GetAxis(axisH), Input.GetAxis(axisV));
 
         //TEMPORAIRE
-        if (Input.GetKey(KeyCode.A) && rMod.arme1)
+        if (Input.GetKeyDown(KeyCode.E) && rMod.arme1)
         {
             rMod.arme1.GetComponent<Arme>().Act();
         }
-        if (Input.GetKey(KeyCode.E) && rMod.arme2)
+        if (Input.GetKeyDown(KeyCode.A) && rMod.arme2)
         {
             rMod.arme2.GetComponent<Arme>().Act();
         }

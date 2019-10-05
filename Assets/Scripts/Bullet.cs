@@ -18,8 +18,8 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         portee--;
-        rb.velocity = transform.up * speed;
-        
+        rb.velocity = transform.right * speed;
+        Debug.DrawRay(transform.position, transform.right);
         if(portee <= 0)
         {
             Destroy(this.gameObject);
