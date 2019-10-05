@@ -33,6 +33,7 @@ public class Arme : Module
             GameObject bul = GameObject.Instantiate(bullet, canon.position, transform.rotation);
             bul.GetComponent<Bullet>().portee = portee;
             bul.GetComponent<Bullet>().speed = vitesseProjectile;
+            bul.GetComponent<Bullet>().damage = damage;
             currentTime = Time.time;
 
         }

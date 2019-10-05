@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4422979839139902968}
   m_Layer: 0
   m_Name: StandarBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portee: 0
+  speed: 0
   type: 3
 --- !u!58 &5834264387125220269
 CircleCollider2D:
