@@ -170,12 +170,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 159c93d04e7267642b14a447bb6adb1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backModule: {fileID: 0}
-  rightModule: {fileID: 0}
-  leftModule: {fileID: 0}
+  arme1: {fileID: 0}
+  arme2: {fileID: 0}
+  protection: {fileID: 0}
+  propulseur: {fileID: 0}
   backModulePivot: {fileID: 845699691}
   rightModulePivot: {fileID: 2085157107}
   leftModulePivot: {fileID: 1774256151}
+  frontModulePivot: {fileID: 302055802}
+--- !u!1 &302055801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 302055802}
+  m_Layer: 0
+  m_Name: FrontPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &302055802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302055801}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.7, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 206201587}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &635306963
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,10 +662,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4192418181769178389, guid: 51ed5e978397af74f8630c183d47d725,
+        type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4192418181769178378, guid: 51ed5e978397af74f8630c183d47d725,
         type: 3}
       propertyPath: playerNumber
-      value: Player1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192418181769178378, guid: 51ed5e978397af74f8630c183d47d725,
+        type: 3}
+      propertyPath: axisH
+      value: Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192418181769178378, guid: 51ed5e978397af74f8630c183d47d725,
+        type: 3}
+      propertyPath: axisV
+      value: Vertical
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51ed5e978397af74f8630c183d47d725, type: 3}
