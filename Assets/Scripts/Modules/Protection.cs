@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public enum TypeProtection { protect,reflect,laser};
+// Création du type énuméré relatif au type de protection du bouclier
+public enum TypeProtection { protect,reflect,laser };
 
 public class Protection : Module
 {
