@@ -51,14 +51,16 @@ public class Workbench : MonoBehaviour
         //Arme
         if(modules[modules.Count - 1].GetComponent<Arme>())
         {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                player.GetComponent<RobotModules>().arme1 = modules[modules.Count - 1];
-                modules.RemoveAt(modules.Count - 1);
-            }
             if (Input.GetKeyDown(KeyCode.D))
             {
+                player.GetComponent<RobotModules>().arme1 = modules[modules.Count - 1];
+                modules[modules.Count - 1].transform.parent = player.transform;
+                modules.RemoveAt(modules.Count - 1);
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
                 player.GetComponent<RobotModules>().arme2 = modules[modules.Count - 1];
+                modules[modules.Count - 1].transform.parent = player.transform;
                 modules.RemoveAt(modules.Count - 1);
             }
         }
@@ -66,12 +68,14 @@ public class Workbench : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) && modules[modules.Count - 1].GetComponent<Propulseur>())
         {
             player.GetComponent<RobotModules>().propulseur = modules[modules.Count - 1];
+            modules[modules.Count - 1].transform.parent = player.transform;
             modules.RemoveAt(modules.Count - 1);
         }
         //Protection
         if (Input.GetKeyDown(KeyCode.S) && modules[modules.Count - 1].GetComponent<Protection>())
         {
             player.GetComponent<RobotModules>().protection = modules[modules.Count - 1];
+            modules[modules.Count - 1].transform.parent = player.transform;
             modules.RemoveAt(modules.Count - 1);
         }
     }

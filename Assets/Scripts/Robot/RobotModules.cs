@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class RobotModules : MonoBehaviour
 {
-    [HideInInspector] public GameObject arme1;
-    [HideInInspector] public GameObject arme2;
-    [HideInInspector] public GameObject protection;
-    [HideInInspector] public GameObject propulseur;
+    public GameObject arme1;
+    public GameObject arme2;
+    public GameObject protection;
+    public GameObject propulseur;
+
+    [Header("Pivot")]
 
     public Transform backModulePivot;
     public Transform rightModulePivot;
@@ -19,7 +21,7 @@ public class RobotModules : MonoBehaviour
         if (arme1)
         {
             arme1.transform.position = rightModulePivot.position;
-            arme2.transform.rotation = rightModulePivot.rotation;
+            arme1.transform.rotation = rightModulePivot.rotation;
 
         }
         if (arme2)

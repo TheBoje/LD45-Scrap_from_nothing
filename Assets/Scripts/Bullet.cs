@@ -5,11 +5,21 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float portee;
+    public float speed;
     public TypeArme type;
+
+    private Rigidbody2D rb;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     private void Update()
     {
         portee--;
+        rb.velocity = transform.up * speed;
+        
         if(portee <= 0)
         {
             Destroy(this.gameObject);

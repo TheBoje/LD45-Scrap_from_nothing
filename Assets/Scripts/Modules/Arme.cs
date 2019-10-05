@@ -15,8 +15,8 @@ public class Arme : Module
 
     //Autres variables nécéssaires
     [SerializeField]private GameObject bullet;  
-    [SerializeField] private float currentTime; //Pour cadancer l'arme
-    const float initialLaunchForce = 200;
+    private float currentTime; //Pour cadancer l'arme
+    [SerializeField] private Transform canon;
 
     private void Start()
     {
@@ -32,9 +32,10 @@ public class Arme : Module
             WaitForCadance();
         }
 
-        GameObject bul = GameObject.Instantiate(bullet, transform.position, Quaternion.identity, transform);
+        GameObject bul = GameObject.Instantiate(bullet, canon.position, transform.rotation, transform);
         bul.GetComponent<Bullet>().portee = portee;
-        bul.GetComponent<Rigidbody2D>().AddForce(transform.forward * initialLaunchForce * vitesseProjectile);
+        bul.GetComponent<Bullet>().speed = vitesseProjectile;
+
     }
 
     IEnumerator WaitForCadance()
