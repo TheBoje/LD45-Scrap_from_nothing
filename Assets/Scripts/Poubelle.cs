@@ -47,6 +47,7 @@ public class Poubelle : MonoBehaviour
             player.GetComponent<RobotModules>().arme1 = null;
             g.transform.position = output.position;
             g.transform.parent = null;
+           // g.GetComponent<RobotMovement>().followed = false;
 
         }
         if (player.GetComponent<RobotModules>().arme2 && Input.GetKeyDown(KeyCode.Q))
@@ -55,6 +56,7 @@ public class Poubelle : MonoBehaviour
             player.GetComponent<RobotModules>().arme2 = null;
             g.transform.position = output.position;
             g.transform.parent = null;
+          //  g.GetComponent<RobotMovement>().followed = false;
 
         }
         //Propulseur
@@ -64,6 +66,7 @@ public class Poubelle : MonoBehaviour
             player.GetComponent<RobotModules>().propulseur = null;
             g.transform.position = output.position;
             g.transform.parent = null;
+           // g.GetComponent<RobotMovement>().followed = false;
 
         }
         //Protection
@@ -73,6 +76,7 @@ public class Poubelle : MonoBehaviour
             player.GetComponent<RobotModules>().protection = null;
             g.transform.position = output.position;
             g.transform.parent = null;
+           // g.GetComponent<RobotMovement>().followed = false;
         }
     }
 }

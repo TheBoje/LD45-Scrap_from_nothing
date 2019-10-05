@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class RobotHP : MonoBehaviour
 {
     public float health;
     public float initHeal;
@@ -13,7 +13,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         mod = GetComponent<Module>();
 
-
+        initHeal = GetComponent<RobotStats>().vie;
         health = initHeal ; // defition de la vie par la vie de base plus varleur armur qui s'ajoute 
     }
 
