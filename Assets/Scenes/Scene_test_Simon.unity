@@ -169,9 +169,9 @@ MonoBehaviour:
   speedBounds: {x: 0.1, y: 4}
   slerpBounds: {x: 0.1, y: 1}
   quarter: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
-  half: {r: 0.3507031, g: 0.65221673, b: 0.6698113, a: 0}
-  halfAndQuarter: {r: 0.02647741, g: 0.8018868, b: 0.06459155, a: 0}
-  full: {r: 0.8490566, g: 0.63966787, b: 0.244304, a: 0}
+  half: {r: 0.3507031, g: 0.65221673, b: 0.6698113, a: 1}
+  halfAndQuarter: {r: 0.02647741, g: 0.8018868, b: 0.06459155, a: 1}
+  full: {r: 0.8490566, g: 0.63966787, b: 0.244304, a: 1}
 --- !u!4 &390420643
 Transform:
   m_ObjectHideFlags: 0
@@ -312,6 +312,7 @@ MonoBehaviour:
   - Arme
   - Propulseur
   nmbrMaxofMod: 20
+  spacingSpawn: 20
 --- !u!4 &1397686753
 Transform:
   m_ObjectHideFlags: 0

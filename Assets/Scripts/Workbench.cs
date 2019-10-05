@@ -69,6 +69,10 @@ public class Workbench : MonoBehaviour
         //Propulseur
         if (Input.GetKeyDown(KeyCode.Z) && modules[modules.Count - 1].GetComponent<Propulseur>())
         {
+            if(player.GetComponent<RobotModules>().propulseur != null)
+            {
+                Destroy(player.GetComponent<RobotModules>().propulseur.gameObject);
+            }
             player.GetComponent<RobotModules>().propulseur = modules[modules.Count - 1];
             modules[modules.Count - 1].transform.parent = player.transform;
             modules[modules.Count - 1].GetComponent<Module>().equiped = true;

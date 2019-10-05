@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public float Health;
-    private float Healthbase=100.0f;
-    public float Armor_Add;
+    public float health;
+    public float initHeal;
+    public float resistance;
     private Module mod;
 
     private void Awake()
@@ -14,12 +14,12 @@ public class NewBehaviourScript : MonoBehaviour
         mod = GetComponent<Module>();
 
 
-        Health = Healthbase ; // defition de la vie par la vie de base plus varleur armur qui s'ajoute 
+        health = initHeal ; // defition de la vie par la vie de base plus varleur armur qui s'ajoute 
     }
 
-    public void Healt_edit()
+    public void Healt_edit(float amount)
     {
-        Health = Health + Armor_Add ; // defition de la vie par la vie de base plus varleur armur qui s'ajoute
+        health = health + amount ; // defition de la vie par la vie de base plus varleur armur qui s'ajoute
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,8 +28,8 @@ public class NewBehaviourScript : MonoBehaviour
             return;
         if (collision.tag == "Bullet")
         {
-            Health -= collision.GetComponent<Bullet>().damage;
-            if (Health <= 0.0f)
+            health -= collision.GetComponent<Bullet>().damage * 1/resistance;
+            if (health <= 0.0f)
             {
                 Destroy(this.gameObject);
             }
