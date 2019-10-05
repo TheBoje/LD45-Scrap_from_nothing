@@ -12,6 +12,7 @@ public class Arme : Module {
     public float portee;               // Facteur de portée de l'arme (défaut = 1)
     public float vitesseProjectile;    // Facteur de vitesse des projectiles de l'arme (défaut = 1)
     public float cadance;              // Facteur de cadence de tir de l'arme (défaut = 1)
+    public Color rarete;
 
     //Autres variables nécéssaires
     [SerializeField] private GameObject bullet;

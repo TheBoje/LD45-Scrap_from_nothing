@@ -239,11 +239,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Gun
   equiped: 0
-  type: 3
   damage: 1
   portee: 50
   vitesseProjectile: 40
   cadance: 0.01
+  rarete: {r: 0, g: 0, b: 0, a: 0}
   bullet: {fileID: 7242760475781270729, guid: d3e079369531bee4f8efc88a0c084e7c, type: 3}
   canon: {fileID: 1841277299}
 --- !u!61 &484895920
@@ -334,11 +334,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Gun
   equiped: 0
-  type: 3
   damage: 10
   portee: 25
   vitesseProjectile: 20
   cadance: 0.5
+  rarete: {r: 0, g: 0, b: 0, a: 0}
   bullet: {fileID: 3218024791049376178, guid: c75ba54e955f65c4d9537a8a03e7f30c, type: 3}
   canon: {fileID: 1181491266}
 --- !u!61 &631797687
