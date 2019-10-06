@@ -294,11 +294,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8493652464985289850, guid: a088e95bbf761774d826771957828852,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2006926056}
     - target: {fileID: 7368663657284696681, guid: a088e95bbf761774d826771957828852,
         type: 3}
       propertyPath: m_Name
@@ -359,6 +354,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8493652464985289850, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2006926056}
     - target: {fileID: 3156291596041902809, guid: a088e95bbf761774d826771957828852,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.x
@@ -369,11 +369,30 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3156291596041902809, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156291596041902809, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.12941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156291596041902809, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.1137255
+      objectReference: {fileID: 0}
     - target: {fileID: 8958226568685544818, guid: a088e95bbf761774d826771957828852,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 85378995, guid: a088e95bbf761774d826771957828852, type: 3}
+      propertyPath: volumeTrigger
+      value: 
+      objectReference: {fileID: 2027342390}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a088e95bbf761774d826771957828852, type: 3}
 --- !u!1 &437082080
@@ -28351,11 +28370,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8493652464985289850, guid: a088e95bbf761774d826771957828852,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 4192418182286886943}
     - target: {fileID: 7368663657284696681, guid: a088e95bbf761774d826771957828852,
         type: 3}
       propertyPath: m_Name
@@ -28416,10 +28430,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8493652464985289850, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 4192418182286886943}
     - target: {fileID: 3156291596041902809, guid: a088e95bbf761774d826771957828852,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156291596041902809, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156291596041902809, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.12941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156291596041902809, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.1137255
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a088e95bbf761774d826771957828852, type: 3}
@@ -28637,7 +28671,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 2.3, y: 4.4605536, z: 0}
+  m_ChunkCullingBounds: {x: 0.16666669, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -28656,7 +28690,7 @@ Tilemap:
   - first: {x: 5, y: -10, z: 0}
     second:
       m_TileIndex: 7
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -28674,7 +28708,7 @@ Tilemap:
   - first: {x: 8, y: -3, z: 0}
     second:
       m_TileIndex: 40
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -28683,7 +28717,7 @@ Tilemap:
   - first: {x: 9, y: -3, z: 0}
     second:
       m_TileIndex: 37
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -28791,7 +28825,7 @@ Tilemap:
   - first: {x: 8, y: -2, z: 0}
     second:
       m_TileIndex: 39
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -28800,7 +28834,7 @@ Tilemap:
   - first: {x: 9, y: -2, z: 0}
     second:
       m_TileIndex: 38
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -29169,7 +29203,7 @@ Tilemap:
   - first: {x: 9, y: 3, z: 0}
     second:
       m_TileIndex: 8
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -29392,6 +29426,8 @@ Tilemap:
       type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -6745975289516894502, guid: e996a03532a4bec4d91159baf4e0f29e,
       type: 3}
@@ -29404,13 +29440,11 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 8608770016763702037, guid: e996a03532a4bec4d91159baf4e0f29e,
       type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 5394849505691100856, guid: e996a03532a4bec4d91159baf4e0f29e,
-      type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 55b4e2e45ae25df48a22423524cca986, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: b349249c0823cc348afbe3359d03e8f9, type: 3}
+    m_Data: {fileID: 5394849505691100856, guid: e996a03532a4bec4d91159baf4e0f29e,
+      type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -4743711023026560332, guid: e996a03532a4bec4d91159baf4e0f29e,
       type: 3}
@@ -30380,6 +30414,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2027342390 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4619630977176275770, guid: a088e95bbf761774d826771957828852,
+    type: 3}
+  m_PrefabInstance: {fileID: 877308274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2031131074
 GameObject:
   m_ObjectHideFlags: 0
@@ -30517,6 +30557,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4548796374470739953, guid: 4afc0e7dd19257f4c899b9552068cd82,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 269884953592103494, guid: 4afc0e7dd19257f4c899b9552068cd82,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 364479498627499493, guid: 4afc0e7dd19257f4c899b9552068cd82,
         type: 3}
       propertyPath: m_Controller
@@ -30533,16 +30583,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e2f7863c89dbb8349a023f5e96a9f8cd,
         type: 3}
-    - target: {fileID: 4548796374470739953, guid: 4afc0e7dd19257f4c899b9552068cd82,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 269884953592103494, guid: 4afc0e7dd19257f4c899b9552068cd82,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 364479499620555796, guid: 4afc0e7dd19257f4c899b9552068cd82,
         type: 3}
       propertyPath: m_LocalRotation.x
