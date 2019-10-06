@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameHolder : MonoBehaviour
 {
 
-    public GameObject player_1;
-    public GameObject player_2;
+    private GameObject player_1;
+    private GameObject player_2;
 
     private GameObject[] modsP1;
     private GameObject[] modsP2;
@@ -17,7 +17,13 @@ public class GameHolder : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         Debug.Log("TEST");
     }
-    
+
+    private void Start()
+    {
+        player_1 = GameObject.Find("Robot_1");
+        player_2 = GameObject.Find("Robot_2");
+    }
+
 
     // Sauvegarde les modules acquis pour les robots à la fin de la phase de farming
     public void save_mods(GameObject player, ref GameObject[] mods)
@@ -46,6 +52,6 @@ public class GameHolder : MonoBehaviour
 
     public void combat_level()
     {
-        //SIMON IL TROLL
+        
     }
 }
