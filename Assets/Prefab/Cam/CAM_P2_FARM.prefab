@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 1296284666345466058}
   - component: {fileID: 2007805112398259455}
   m_Layer: 0
-  m_Name: CameraRobot2
+  m_Name: CAM_P2_FARM
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 6611585491120384118}
+  volumeTrigger: {fileID: 5520386229882131577, guid: 272fa53d22888294b848d22c2b7eb101,
+    type: 3}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 256

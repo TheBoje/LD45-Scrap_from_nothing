@@ -294,6 +294,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8493652464985289850, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2006926056}
     - target: {fileID: 7368663657284696681, guid: a088e95bbf761774d826771957828852,
         type: 3}
       propertyPath: m_Name
@@ -364,11 +369,6 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: -8493652464985289850, guid: a088e95bbf761774d826771957828852,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2006926056}
     - target: {fileID: 8958226568685544818, guid: a088e95bbf761774d826771957828852,
         type: 3}
       propertyPath: m_Enabled
@@ -28104,6 +28104,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &727265844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3006532801272752090, guid: c5b4dc7a83510074dbe379275e2f02c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1597967874}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &865606924
 GameObject:
   m_ObjectHideFlags: 0
@@ -28345,6 +28351,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8493652464985289850, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 4192418182286886943}
     - target: {fileID: 7368663657284696681, guid: a088e95bbf761774d826771957828852,
         type: 3}
       propertyPath: m_Name
@@ -28410,11 +28421,6 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: -8493652464985289850, guid: a088e95bbf761774d826771957828852,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 4192418182286886943}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a088e95bbf761774d826771957828852, type: 3}
 --- !u!1 &942604792
@@ -30160,9 +30166,12 @@ MonoBehaviour:
   timer: {fileID: 1467596743}
   lifeP1: {fileID: 620300070}
   lifeP2: {fileID: 1058704390}
+  shieldP1: {fileID: 0}
+  shieldP2: {fileID: 0}
   beginText: {fileID: 674020658}
+  currCountdownValue: 0
   player_1: {fileID: 364479499283661116}
-  player_2: {fileID: 0}
+  player_2: {fileID: 727265844}
 --- !u!114 &1824878220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30513,10 +30522,26 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4548796374470739952, guid: 4afc0e7dd19257f4c899b9552068cd82,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548796374470739952, guid: 4afc0e7dd19257f4c899b9552068cd82,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e2f7863c89dbb8349a023f5e96a9f8cd,
+        type: 3}
     - target: {fileID: 4548796374470739953, guid: 4afc0e7dd19257f4c899b9552068cd82,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 269884953592103494, guid: 4afc0e7dd19257f4c899b9552068cd82,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 364479499620555796, guid: 4afc0e7dd19257f4c899b9552068cd82,
         type: 3}
@@ -30567,22 +30592,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PointLightInnerRadius
       value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4548796374470739952, guid: 4afc0e7dd19257f4c899b9552068cd82,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4548796374470739952, guid: 4afc0e7dd19257f4c899b9552068cd82,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e2f7863c89dbb8349a023f5e96a9f8cd,
-        type: 3}
-    - target: {fileID: 269884953592103494, guid: 4afc0e7dd19257f4c899b9552068cd82,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4afc0e7dd19257f4c899b9552068cd82, type: 3}
