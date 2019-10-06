@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIArenaScript : MonoBehaviour
 {
@@ -95,6 +96,19 @@ public class UIArenaScript : MonoBehaviour
             {
                 TextFadeOut();
             }
+            if (currCountdownValue == 47)
+            {
+                TextFadeIn();
+                beginText.text = GetWinnerName();
+            }
+
+
+            if(currCountdownValue == 42)
+            {
+                Destroy(player_1);
+                Destroy(player_2);
+                SceneManager.LoadScene("Menu");
+            }
         }
     }
 
@@ -102,7 +116,28 @@ public class UIArenaScript : MonoBehaviour
     {
         print_life();
         print_shield();
+        winner();
     }
 
+    public void winner()
+    {
+        if(player_1.GetComponent<RobotHP>().health <= 0 || player_2.GetComponent<RobotHP>().health <= 0)
+        {
+            StartCoroutine(StartCountdown(47));
+
+        }
+
+    }
+     string GetWinnerName()
+    {
+        if (player_1.GetComponent<RobotHP>().health <= 0)
+        {
+            return "Player 2 win !";
+        }
+        else
+        {
+            return "Player 1 win !";
+        }
+    }
 
 }
