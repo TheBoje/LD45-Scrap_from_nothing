@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameHolder : MonoBehaviour
 {
@@ -41,8 +42,9 @@ public class GameHolder : MonoBehaviour
     public void farming_level()
     {
         //
-        save_mods(player_1, ref modsP1);
+        //save_mods(player_1, ref modsP1);
         //save_mods(player_2, ref modsP2);
+        SceneManager.LoadScene("scene2");
     }
 
 
