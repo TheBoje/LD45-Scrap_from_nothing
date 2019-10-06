@@ -14,7 +14,7 @@ public class UIFarmingScript : MonoBehaviour
     [SerializeField] private Text beginText;
 
 
-    private float currCountdownValue;
+    [SerializeField] private float currCountdownValue;
 
     [SerializeField] private GameObject player_1;
     [SerializeField] private GameObject player_2;
@@ -44,6 +44,15 @@ public class UIFarmingScript : MonoBehaviour
 
     }
 
+    public void TextFadeIn()
+    {
+        Debug.Log("Fading in");
+    }
+
+    public void TextFadeOut()
+    {
+        Debug.Log("Fading out");
+    }
 
     // Gère le compteur    
     public IEnumerator StartCountdown(float countdownValue = 90)
@@ -64,12 +73,32 @@ public class UIFarmingScript : MonoBehaviour
             else if(currCountdownValue == 100)
             {
                 beginText.text = "GO !";
-            }
-            else if(currCountdownValue < 100)
-            {
+
                 player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            }
+            else if(currCountdownValue < 100 && currCountdownValue > 3)
+            {
                 beginText.text = "";
+            }
+            else if(currCountdownValue == 3)
+            {
+                beginText.text = "3";
+            }
+            else if(currCountdownValue == 2)
+            {
+                beginText.text = "2";
+            }
+            else if (currCountdownValue == 1)
+            {
+                beginText.text = "1";
+            }
+            else if (currCountdownValue <= 0)
+            {
+                beginText.text = "Time's up!";
+
+                player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+                player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
             }
         }
                  
