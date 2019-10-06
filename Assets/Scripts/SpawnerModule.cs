@@ -24,7 +24,7 @@ public class SpawnerModule : MonoBehaviour
         if(currentTime + timestamp > Time.time && nmbrMaxofMod > 0)
         {
 
-            pMGen.CreateModuleObject(new Vector2(Random.Range(-spacingSpawn, spacingSpawn), Random.Range(-spacingSpawn, spacingSpawn)),types[(int)Random.Range(0,types.Count)]);
+            pMGen.CreateModuleObject(transform.position + new Vector3(Random.Range(-spacingSpawn, spacingSpawn), Random.Range(-spacingSpawn, spacingSpawn)),types[(int)Random.Range(0,types.Count)]);
             nmbrMaxofMod--;
 
             currentTime = Time.time;
