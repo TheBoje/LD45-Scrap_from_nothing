@@ -26,6 +26,7 @@ public class Arme : Module {
         {
             GameObject bul = GameObject.Instantiate (bullet, canon.position, transform.rotation);   // Création de la balle dans une instance
             bul.GetComponent<Bullet> ().portee = portee;                                            // Application de la portée à la balle
+            bul.GetComponent<Bullet>().owner = this.gameObject;
             bul.GetComponent<Bullet> ().speed = vitesseProjectile;                                  // Application de la vitesse du projectile à la balle
             bul.GetComponent<Bullet> ().damage = damage;                                            // Application des dégats à la balle
             currentTime = Time.time;                                                                // Réinitialisation du cooldown de la cadence
