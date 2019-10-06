@@ -448,7 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   modules: []
-  radiusDetect: 3
+  radiusDetect: 3.5
 --- !u!1 &8555162598881565774
 GameObject:
   m_ObjectHideFlags: 0
