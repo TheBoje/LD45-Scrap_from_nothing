@@ -24,9 +24,8 @@ public class UIArenaScript : MonoBehaviour
     {
         player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
         player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-
+        
         StartCoroutine(StartCountdown(7));
-
 
         beginText.canvasRenderer.SetAlpha(0f);
 

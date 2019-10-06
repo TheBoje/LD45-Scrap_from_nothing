@@ -62,7 +62,6 @@ public class CameraArena : MonoBehaviour
         {
             temp_result = 7;
         }
-
         return temp_result;
     }
 
