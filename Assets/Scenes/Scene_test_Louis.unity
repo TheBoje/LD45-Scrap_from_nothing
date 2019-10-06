@@ -968,6 +968,11 @@ PrefabInstance:
       propertyPath: m_TargetDisplay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8958226568685544818, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8493652464985289850, guid: a088e95bbf761774d826771957828852,
         type: 3}
       propertyPath: player
@@ -977,11 +982,6 @@ PrefabInstance:
         type: 3}
       propertyPath: smoothFactor
       value: 0.125
-      objectReference: {fileID: 0}
-    - target: {fileID: 8958226568685544818, guid: a088e95bbf761774d826771957828852,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 85378995, guid: a088e95bbf761774d826771957828852, type: 3}
       propertyPath: antialiasingMode
