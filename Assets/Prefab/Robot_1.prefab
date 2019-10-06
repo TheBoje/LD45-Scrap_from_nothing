@@ -267,9 +267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c951330c9d3bb374e8cb904be529b695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 6
   speedMulti: 1
-  slerpTime: 0
+  slerpTime: 1
   slerpMulti: 1
   followed: 0
   input: {x: 0, y: 0}
@@ -282,14 +282,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4548796374399732024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24b9d6ab9c1236c4b945505159cd02ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ad06465c1cdced408d574936b371bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
   axisH: Horizontal
   axisV: Vertical
-  arme1Key: 101
-  arme2Key: 97
+  arme1Key: 97
+  arme2Key: 101
 --- !u!61 &364479497516882229
 BoxCollider2D:
   m_ObjectHideFlags: 0

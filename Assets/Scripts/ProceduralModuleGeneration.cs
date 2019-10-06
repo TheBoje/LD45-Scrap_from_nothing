@@ -20,6 +20,7 @@ public class ProceduralModuleGeneration : MonoBehaviour
 
     [Header("Valeur Pour les protection")]
     [SerializeField] private Vector2 defenceBounds;
+    [SerializeField] private List<TypeProtection> possibleType;
 
     [Header("Couleur de rareté")]
     [SerializeField] Color quarter;
@@ -95,7 +96,7 @@ public class ProceduralModuleGeneration : MonoBehaviour
     {
         Protection prot = new Protection();
 
-        prot.type = (TypeProtection)Random.Range(0,(int)TypeProtection.reflect);
+        prot.type = possibleType[(int)Random.Range(0,possibleType.Count)];
         prot.defence = Random.Range(defenceBounds[0], defenceBounds[1]);
 
         float averageValue = prot.defence * 100 / defenceBounds[1];
