@@ -39,19 +39,31 @@ public class CameraArena : MonoBehaviour
         Vector2 player1Viewport = Camera.main.WorldToViewportPoint(targets[0].position);
         Vector2 player2Viewport = Camera.main.WorldToViewportPoint(targets[1].position);
         float viewportDistance = Vector2.Distance(player1Viewport, player2Viewport);
+        float temp_result;
 
-        if (viewportDistance > maxViewportDistance)
+        if (viewportDistance <= maxViewportDistance && viewportDistance >= minViewportDistance)
         {
-            return camera.orthographicSize + 0.05f;
+            temp_result = camera.orthographicSize;
+        }
+        else if (viewportDistance > maxViewportDistance)
+        {
+            temp_result = camera.orthographicSize + 0.04f;
         }
         else if (viewportDistance < minViewportDistance)
         {
-            return camera.orthographicSize - 0.05f;
+            temp_result = camera.orthographicSize - 0.04f;
         }
         else
         {
-            return camera.orthographicSize;
+            temp_result = camera.orthographicSize;
         }
+        
+        if (temp_result < 7)
+        {
+            temp_result = 7;
+        }
+
+        return temp_result;
     }
 
 
