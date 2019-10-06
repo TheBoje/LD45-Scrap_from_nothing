@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 3006532801272752091}
   - component: {fileID: 1411649479746680791}
   - component: {fileID: 1411649479804446756}
+  - component: {fileID: 2007862679614068383}
   - component: {fileID: 962816738925369011}
   - component: {fileID: 5765084685651605610}
   m_Layer: 0
@@ -335,6 +336,21 @@ MonoBehaviour:
   rightModulePivot: {fileID: 1411649477925237282}
   leftModulePivot: {fileID: 1411649478117591750}
   frontModulePivot: {fileID: 1411649479304580011}
+--- !u!114 &2007862679614068383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3006532801272752090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caeb22583789b14cb96482d24d3f651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  initHeal: 100
+  resistance: 1
 --- !u!212 &962816738925369011
 SpriteRenderer:
   m_ObjectHideFlags: 0
