@@ -73,7 +73,7 @@ public class UIFarmingScript : MonoBehaviour
             if(currCountdownValue == 104)
             {
                 TextFadeIn();
-                beginText.text = "READY ?";
+                beginText.text = "Ready ?";
             }
             if (currCountdownValue == 101)
             {
@@ -82,7 +82,7 @@ public class UIFarmingScript : MonoBehaviour
             else if(currCountdownValue == 100)
             {
                 
-                beginText.text = "GO !";
+                beginText.text = "Go !";
                 TextFadeIn();
                 player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
