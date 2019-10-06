@@ -52,12 +52,12 @@ MonoBehaviour:
   damageBounds: {x: 5, y: 25}
   porteeBounds: {x: 20, y: 100}
   vitessBounds: {x: 10, y: 80}
-  cadanceBounds: {x: 0.01, y: 3}
+  cadanceBounds: {x: 0.01, y: 1}
   bullets:
   - {fileID: 7242760475781270729, guid: d3e079369531bee4f8efc88a0c084e7c, type: 3}
   - {fileID: 3218024791049376178, guid: c75ba54e955f65c4d9537a8a03e7f30c, type: 3}
-  speedBounds: {x: 1, y: 5}
-  slerpBounds: {x: 1, y: 5}
+  speedBounds: {x: 1, y: 3.5}
+  slerpBounds: {x: 1, y: 3.5}
   defenceBounds: {x: 2, y: 4}
   possibleType: 00000000
   quarter: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}

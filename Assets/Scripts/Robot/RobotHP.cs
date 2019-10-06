@@ -21,6 +21,11 @@ public class RobotHP : MonoBehaviour
         {
             return;
         }
+        if (GameObject.Find("DjEffect"))
+        {
+
+            GameObject.Find("DjEffect").GetComponent<DJEffect>().Impact(transform.position);
+        }
         health = health + amount ; // defition de la vie par la vie de base plus varleur armur qui s'ajoute
     }
     private void Update()
