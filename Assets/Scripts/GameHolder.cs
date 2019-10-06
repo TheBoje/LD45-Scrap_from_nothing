@@ -15,6 +15,7 @@ public class GameHolder : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        Debug.Log("TEST");
     }
 
     // Start is called before the first frame update

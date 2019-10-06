@@ -19,6 +19,8 @@ public class UIFarmingScript : MonoBehaviour
     [SerializeField] private GameObject player_1;
     [SerializeField] private GameObject player_2;
 
+    public GameObject gh;
+
 
     // Start is called before the first frame update
     void Start()
@@ -115,6 +117,7 @@ public class UIFarmingScript : MonoBehaviour
                 player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
                 player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
                 beginText.text = "Time's up!";
+                gh.GetComponent<GameHolder>().farming_level();
             }
         }
                  
