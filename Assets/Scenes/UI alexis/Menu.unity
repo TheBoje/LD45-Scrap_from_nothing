@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -330,7 +330,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 400966562}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 927181829}
+        m_MethodName: BTNStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &400966562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,7 +614,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 927181825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afa9cf19b8b1e0f439cf5be6a1a0c0f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 739abe7f3536c344c81db34a40d51889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1115348710

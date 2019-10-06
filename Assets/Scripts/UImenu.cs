@@ -18,12 +18,17 @@ public class UImenu : MonoBehaviour
 
     public void BTNStart()
     {
-
+        SceneManager.LoadScene("Instruction");
     }
 
     public void ReturnMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void LaunchGame()
+    {
+
     }
 
 }

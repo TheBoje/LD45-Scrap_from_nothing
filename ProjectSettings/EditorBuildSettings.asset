@@ -13,5 +13,8 @@ EditorBuildSettings:
     guid: 74d5d16c72eb1694d9ab2b53226c8835
   - enabled: 1
     path: Assets/Scenes/UI alexis/Credits.unity
-    guid: 57003311d125699489f7a14d4e37f0f9
+    guid: 43fdfd7baadb75a409c4b9742715e1ee
+  - enabled: 1
+    path: Assets/Scenes/UI alexis/Instruction.unity
+    guid: 94650516bb553a54ca896b361d6770a8
   m_configObjects: {}
