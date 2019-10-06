@@ -34,7 +34,9 @@ public class ItemFollow : MonoBehaviour
     {
         if (Target != null)                                                                         // Attente que un cible soit prise par un objet ( l'bojet resteras en place)
         {
-            Direction = Target.transform.position - transform.position;                             // Calcul de la direction 
+            Direction = Target.transform.position - transform.position;
+            Debug.DrawRay(transform.position, Direction);
+            // Calcul de la direction 
             if ( Vector3.Distance(Target.transform.position, transform.position) > distMax)
             {
                 transform.Translate(Direction * Time.deltaTime * Speed );                           // Deplacement de l'objet en fonction de la direction du temp et de la vitesse
