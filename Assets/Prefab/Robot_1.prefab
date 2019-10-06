@@ -288,8 +288,8 @@ MonoBehaviour:
   playerNumber: 0
   axisH: Horizontal
   axisV: Vertical
-  arme1Key: 97
-  arme2Key: 101
+  arme1Key: 99
+  arme2Key: 118
 --- !u!61 &364479497516882229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -400,6 +400,7 @@ MonoBehaviour:
   health: 0
   initHeal: 100
   resistance: 1
+  canGetHitted: 0
 --- !u!95 &364479498627499493
 Animator:
   serializedVersion: 3
