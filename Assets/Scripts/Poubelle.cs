@@ -48,6 +48,7 @@ public class Poubelle : MonoBehaviour
             Vector3 randomVector3 = new Vector3(Random.value, Random.value, 0f);
             g.transform.position = output.position + randomVector3;
             g.transform.parent = null;
+            g.GetComponent<Module>().equiped = false;
             g.GetComponent<ItemFollow>().enabled = true;
             g.GetComponent<ItemFollow>().Target = null;
 
@@ -60,6 +61,7 @@ public class Poubelle : MonoBehaviour
             Vector3 randomVector3 = new Vector3(Random.value, Random.value, 0f);
             g.transform.position = output.position + randomVector3;
             g.transform.parent = null;
+            g.GetComponent<Module>().equiped = false;
             g.GetComponent<ItemFollow>().enabled = true;
             g.GetComponent<ItemFollow>().Target = null;
         }
@@ -72,6 +74,7 @@ public class Poubelle : MonoBehaviour
             Vector3 randomVector3 = new Vector3(Random.value, Random.value, 0f);
             g.transform.position = output.position + randomVector3;
             g.transform.parent = null;
+            g.GetComponent<Module>().equiped = false;
             g.GetComponent<ItemFollow>().enabled = true;
             g.GetComponent<ItemFollow>().Target = null;
 
@@ -85,6 +88,7 @@ public class Poubelle : MonoBehaviour
             Vector3 randomVector3 = new Vector3(Random.value, Random.value, 0f);
             g.transform.position = output.position + randomVector3;
             g.transform.parent = null;
+            g.GetComponent<Module>().equiped = false;
             g.GetComponent<ItemFollow>().enabled = true;
             g.GetComponent<ItemFollow>().Target = null;
         }
