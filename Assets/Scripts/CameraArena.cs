@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class CameraArena : MonoBehaviour
 {
-    public List<Transform> targets;
+    public GameObject[] targets;
 
     public Vector3 offset;
 
@@ -18,12 +18,13 @@ public class CameraArena : MonoBehaviour
     private void Start()
     {
         camera = GetComponent<Camera>();
+        targets = GameObject.FindGameObjectsWithTag("Player");
     }
 
        
     void LateUpdate()
     {
-        if (targets.Count == 0)
+        if (targets.Length == 0)
         {
             return;
         }
@@ -36,8 +37,8 @@ public class CameraArena : MonoBehaviour
 
     float CalcCameraPos()
     {
-        Vector2 player1Viewport = Camera.main.WorldToViewportPoint(targets[0].position);
-        Vector2 player2Viewport = Camera.main.WorldToViewportPoint(targets[1].position);
+        Vector2 player1Viewport = Camera.main.WorldToViewportPoint(targets[0].transform.position);
+        Vector2 player2Viewport = Camera.main.WorldToViewportPoint(targets[1].transform.position);
         float viewportDistance = Vector2.Distance(player1Viewport, player2Viewport);
         float temp_result;
 
@@ -68,15 +69,15 @@ public class CameraArena : MonoBehaviour
 
     Vector3 GetCenterPoint()
     {
-        if (targets.Count == 1)
+        if (targets.Length == 1)
         {
-            return targets[0].position;
+            return targets[0].transform.position;
         }
 
-        var bounds = new Bounds(targets[0].position, Vector3.zero);
-        for (int i = 0; i < targets.Count; i++)
+        var bounds = new Bounds(targets[0].transform.position, Vector3.zero);
+        for (int i = 0; i < targets.Length; i++)
         {
-            bounds.Encapsulate(targets[i].position);
+            bounds.Encapsulate(targets[i].transform.position);
         }
 
         return bounds.center;
