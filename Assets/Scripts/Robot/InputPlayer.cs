@@ -10,6 +10,9 @@ public class InputPlayer : MonoBehaviour
     public string axisH;
     public string axisV;
 
+    public KeyCode arme1Key;
+    public KeyCode arme2Key;
+
     private RobotMovement rM;
     private RobotModules rMod;
 
@@ -24,11 +27,11 @@ public class InputPlayer : MonoBehaviour
         rM.input = new Vector2(Input.GetAxis(axisH), Input.GetAxis(axisV));
 
         //TEMPORAIRE
-        if (Input.GetKeyDown(KeyCode.E) && rMod.arme1)
+        if (Input.GetKeyDown(arme1Key) && rMod.arme1)
         {
             rMod.arme1.GetComponent<Arme>().Act();
         }
-        if (Input.GetKeyDown(KeyCode.A) && rMod.arme2)
+        if (Input.GetKeyDown(arme2Key) && rMod.arme2)
         {
             rMod.arme2.GetComponent<Arme>().Act();
         }
