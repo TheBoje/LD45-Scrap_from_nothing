@@ -9,6 +9,8 @@ public class UIFarmingScript : MonoBehaviour
     [SerializeField] private Text timer;
     [SerializeField] private Text lifeP1;
     [SerializeField] private Text lifeP2;
+    [SerializeField] private Text shieldP1;
+    [SerializeField] private Text shieldP2;
     [SerializeField] private Text beginText;
 
 
@@ -22,7 +24,6 @@ public class UIFarmingScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(StartCountdown(105));
-        print_life();
 
         player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
         player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
@@ -33,6 +34,14 @@ public class UIFarmingScript : MonoBehaviour
     {
         lifeP1.text = player_1.GetComponent<RobotHP>().health.ToString();
         lifeP2.text = player_2.GetComponent<RobotHP>().health.ToString();
+    }
+
+    public void print_shield() 
+    {
+        // C'est vraiment cette valeur que je dois prendre ? J'ai peur  
+        shieldP1.text = player_1.GetComponent<RobotHP>().resistance.ToString();
+        shieldP2.text = player_2.GetComponent<RobotHP>().resistance.ToString();
+
     }
 
 
@@ -69,6 +78,7 @@ public class UIFarmingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        print_life();
+        print_shield();
     }
 }
