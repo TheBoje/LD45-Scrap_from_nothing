@@ -27,6 +27,8 @@ public class UIFarmingScript : MonoBehaviour
 
         player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
         player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+
+        beginText.canvasRenderer.SetAlpha(0f);
     }
 
     // Affiche les points de vie de chaque players
@@ -46,12 +48,14 @@ public class UIFarmingScript : MonoBehaviour
 
     public void TextFadeIn()
     {
-        Debug.Log("Fading in");
+        beginText.CrossFadeAlpha(1, 0.2f, false);
+        Debug.Log("Fading IN");
     }
 
     public void TextFadeOut()
     {
-        Debug.Log("Fading out");
+        beginText.CrossFadeAlpha(0, 0.2f, false);
+        Debug.Log("Fading OUT");
     }
 
     // Gère le compteur    
@@ -68,37 +72,56 @@ public class UIFarmingScript : MonoBehaviour
 
             if(currCountdownValue == 104)
             {
+                TextFadeIn();
                 beginText.text = "READY ?";
+            }
+            if (currCountdownValue == 101)
+            {
+                TextFadeOut();
             }
             else if(currCountdownValue == 100)
             {
+                
                 beginText.text = "GO !";
-
+                TextFadeIn();
                 player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                
             }
-            else if(currCountdownValue < 100 && currCountdownValue > 3)
+            else if(currCountdownValue <= 98 && currCountdownValue > 3)
             {
+                TextFadeOut();
                 beginText.text = "";
             }
             else if(currCountdownValue == 3)
             {
+
                 beginText.text = "3";
+                TextFadeIn();
+                
             }
             else if(currCountdownValue == 2)
             {
+                TextFadeOut();
                 beginText.text = "2";
+                TextFadeIn();
             }
             else if (currCountdownValue == 1)
             {
+                TextFadeOut();
                 beginText.text = "1";
+                TextFadeIn();
             }
             else if (currCountdownValue <= 0)
             {
-                beginText.text = "Time's up!";
+                TextFadeOut();
 
                 player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
                 player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+                beginText.text = "Time's up!";
+
+
+                TextFadeIn();
             }
         }
                  
