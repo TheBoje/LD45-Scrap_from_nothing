@@ -39,7 +39,8 @@ public class ItemFollow : MonoBehaviour
             // Calcul de la direction 
             if ( Vector3.Distance(Target.transform.position, transform.position) > distMax)
             {
-                transform.Translate(Direction * Time.deltaTime * Speed );                           // Deplacement de l'objet en fonction de la direction du temp et de la vitesse
+                //transform.Translate(Direction * Time.deltaTime * Speed );                           // Deplacement de l'objet en fonction de la direction du temp et de la vitesse
+                transform.position = Vector3.Slerp(transform.position, Target.transform.position, Time.deltaTime * Speed);
             }
         }
 

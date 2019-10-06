@@ -183,5 +183,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  output: {fileID: 4727476756358696016}
-  radiusDetect: 1.5
+  output: []
+  radiusDetect: 2
