@@ -17,17 +17,7 @@ public class GameHolder : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         Debug.Log("TEST");
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     // Sauvegarde les modules acquis pour les robots à la fin de la phase de farming
     public void save_mods(GameObject player, ref GameObject[] mods)
@@ -42,9 +32,9 @@ public class GameHolder : MonoBehaviour
 
     public void farming_level()
     {
-        //
-        //save_mods(player_1, ref modsP1);
-        //save_mods(player_2, ref modsP2);
+        
+        save_mods(player_1, ref modsP1);
+        save_mods(player_2, ref modsP2);
         SceneManager.LoadScene("scene2");
     }
 
