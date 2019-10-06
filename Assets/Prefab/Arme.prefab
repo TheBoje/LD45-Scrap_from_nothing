@@ -121,7 +121,6 @@ GameObject:
   - component: {fileID: 3074143693356513939}
   - component: {fileID: 3074143693356513938}
   - component: {fileID: 3074143693356513933}
-  - component: {fileID: 3074143693356513936}
   - component: {fileID: 5566226000181102240}
   m_Layer: 0
   m_Name: Arme
@@ -193,19 +192,6 @@ MonoBehaviour:
   cadance: 0
   bullet: {fileID: 0}
   canon: {fileID: 3074143693077020497}
---- !u!114 &3074143693356513936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3074143693356513932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36e5a87e3278a84429782eb8f4c51643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "durabilit\xE9": 20
 --- !u!114 &5566226000181102240
 MonoBehaviour:
   m_ObjectHideFlags: 0
