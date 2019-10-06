@@ -5,16 +5,20 @@ using UnityEngine;
 public class GameHolder : MonoBehaviour
 {
 
-    private GameObject player_1;
-    private GameObject player_2;
+    public GameObject player_1;
+    public GameObject player_2;
 
     private GameObject[] modsP1;
     private GameObject[] modsP2;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -38,7 +42,7 @@ public class GameHolder : MonoBehaviour
     {
         //
         save_mods(player_1, ref modsP1);
-        save_mods(player_2, ref modsP2);
+        //save_mods(player_2, ref modsP2);
     }
 
 
