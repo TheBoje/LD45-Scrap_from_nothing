@@ -49,13 +49,11 @@ public class UIFarmingScript : MonoBehaviour
     public void TextFadeIn()
     {
         beginText.CrossFadeAlpha(1, 0.2f, false);
-        Debug.Log("Fading IN");
     }
 
     public void TextFadeOut()
     {
         beginText.CrossFadeAlpha(0, 0.2f, false);
-        Debug.Log("Fading OUT");
     }
 
     // Gère le compteur    
@@ -88,9 +86,13 @@ public class UIFarmingScript : MonoBehaviour
                 player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 
             }
-            else if(currCountdownValue <= 98 && currCountdownValue > 3)
+            if (currCountdownValue == 98)
             {
                 TextFadeOut();
+            }
+            else if(currCountdownValue < 98 && currCountdownValue > 3)
+            {
+
                 beginText.text = "";
             }
             else if(currCountdownValue == 3)
@@ -102,26 +104,17 @@ public class UIFarmingScript : MonoBehaviour
             }
             else if(currCountdownValue == 2)
             {
-                TextFadeOut();
                 beginText.text = "2";
-                TextFadeIn();
             }
             else if (currCountdownValue == 1)
             {
-                TextFadeOut();
                 beginText.text = "1";
-                TextFadeIn();
             }
             else if (currCountdownValue <= 0)
             {
-                TextFadeOut();
-
                 player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
                 player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
                 beginText.text = "Time's up!";
-
-
-                TextFadeIn();
             }
         }
                  
