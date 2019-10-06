@@ -23,6 +23,9 @@ public class UIFarmingScript : MonoBehaviour
     {
         StartCoroutine(StartCountdown(105));
         print_life();
+
+        player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+        player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
     }
 
     // Affiche les points de vie de chaque players
@@ -55,6 +58,8 @@ public class UIFarmingScript : MonoBehaviour
             }
             else if(currCountdownValue < 100)
             {
+                player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 beginText.text = "";
             }
         }
