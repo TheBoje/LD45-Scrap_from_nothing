@@ -22,10 +22,11 @@ public class UIArenaScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(StartCountdown(7));
-
         player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
         player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+
+        StartCoroutine(StartCountdown(7));
+
 
         beginText.canvasRenderer.SetAlpha(0f);
 
@@ -66,7 +67,7 @@ public class UIArenaScript : MonoBehaviour
             if (currCountdownValue == 6)
             {
                 TextFadeIn();
-                beginText.text = "READY ?";
+                beginText.text = "Ready ?";
             }
             if (currCountdownValue == 4)
             {
