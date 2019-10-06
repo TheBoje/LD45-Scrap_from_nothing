@@ -195,6 +195,7 @@ MonoBehaviour:
   speedBounds: {x: 1, y: 5}
   slerpBounds: {x: 1, y: 5}
   defenceBounds: {x: 2, y: 4}
+  possibleType: 00000000
   quarter: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
   half: {r: 0.3507031, g: 0.65221673, b: 0.6698113, a: 1}
   halfAndQuarter: {r: 0.02647741, g: 0.8018868, b: 0.06459155, a: 1}
