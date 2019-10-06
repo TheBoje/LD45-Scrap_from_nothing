@@ -35,7 +35,11 @@ public class GameHolder : MonoBehaviour
         
         save_mods(player_1, ref modsP1);
         save_mods(player_2, ref modsP2);
+        player_1.GetComponent<RobotHP>().canGetHitted = true;
+        player_2.GetComponent<RobotHP>().canGetHitted = true;
         SceneManager.LoadScene("scene2");
+
+
     }
 
 
