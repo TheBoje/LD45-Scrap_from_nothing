@@ -6,6 +6,7 @@ public class ProceduralModuleGeneration : MonoBehaviour
 {
     public GameObject prefabArme;
     public GameObject prefabProp;
+    public GameObject prefabProt;
     [Header("Valeur Pour les armes")]
     [SerializeField] private Vector2Int damageBounds;
     [SerializeField] private Vector2 porteeBounds;
@@ -16,6 +17,9 @@ public class ProceduralModuleGeneration : MonoBehaviour
     [Header("Valeur Pour les propulseur")]
     [SerializeField] private Vector2 speedBounds;
     [SerializeField] private Vector2 slerpBounds;
+
+    [Header("Valeur Pour les protection")]
+    [SerializeField] private Vector2 defenceBounds;
 
     [Header("Couleur de rareté")]
     [SerializeField] Color quarter;
@@ -87,6 +91,35 @@ public class ProceduralModuleGeneration : MonoBehaviour
         return prop;
     }
 
+    private Protection GenerateProtection()
+    {
+        Protection prot = new Protection();
+
+        prot.type = (TypeProtection)Random.Range(0,(int)TypeProtection.reflect);
+        prot.defence = Random.Range(defenceBounds[0], defenceBounds[1]);
+
+        float averageValue = prot.defence * 100 / defenceBounds[1];
+
+        if (averageValue <= 25)
+        {
+            prot.rarete = quarter;
+        }
+        else if (averageValue <= 50)
+        {
+            prot.rarete = half;
+        }
+        else if (averageValue <= 75)
+        {
+            prot.rarete = halfAndQuarter;
+        }
+        else
+        {
+            prot.rarete = full;
+        }
+
+        return prot;
+    }
+
     public void CreateModuleObject(Vector3 pos, string type)
     {
         if(type == "Arme")
@@ -111,6 +144,14 @@ public class ProceduralModuleGeneration : MonoBehaviour
             mod.GetComponent<Propulseur>().speedRotaMultiplicator = p.speedRotaMultiplicator;
             mod.GetComponent<Propulseur>().rarete = p.rarete;
             mod.GetComponent<Propulseur>().SetColor();
+        }else if(type == "Protection")
+        {
+            GameObject mod = GameObject.Instantiate(prefabProt, pos, Quaternion.identity);
+            Protection p = GenerateProtection();
+            mod.GetComponent<Protection>().defence = p.defence;
+            mod.GetComponent<Protection>().type = p.type;
+            mod.GetComponent<Protection>().rarete = p.rarete;
+            mod.GetComponent<Protection>().SetColor();
         }
     }
 }
