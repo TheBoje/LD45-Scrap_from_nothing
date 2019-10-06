@@ -13,8 +13,8 @@ public class UIArenaScript : MonoBehaviour
 
     [SerializeField] private float currCountdownValue;
 
-    [SerializeField] private GameObject player_1;
-    [SerializeField] private GameObject player_2;
+    private GameObject player_1;
+    private GameObject player_2;
 
     public GameObject gh;
 
@@ -22,6 +22,10 @@ public class UIArenaScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player_1 = GameObject.Find("Robot_1");
+        player_2 = GameObject.Find("Robot_2");
+
+
         player_1.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
         player_2.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
         

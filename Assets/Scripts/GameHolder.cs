@@ -38,7 +38,8 @@ public class GameHolder : MonoBehaviour
         player_1.GetComponent<RobotHP>().canGetHitted = true;
         player_2.GetComponent<RobotHP>().canGetHitted = true;
         SceneManager.LoadScene("scene2");
-
+        player_1.transform.position = new Vector3(-1.22f, 58.13f, 0);
+        player_2.transform.position = new Vector3(8.97f, 58.06f, 0);
 
     }
 
