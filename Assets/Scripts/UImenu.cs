@@ -13,12 +13,17 @@ public class UImenu : MonoBehaviour
 
     public void Credits()
     {
-
+        SceneManager.LoadScene("Credits");
     }
 
     public void BTNStart()
     {
 
+    }
+
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
 }
