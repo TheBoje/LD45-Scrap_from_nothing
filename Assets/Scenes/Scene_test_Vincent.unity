@@ -210,6 +210,12 @@ MonoBehaviour:
   health: 0
   initHeal: 100
   resistance: 0
+--- !u!4 &146075946 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3006532801272752070, guid: c5b4dc7a83510074dbe379275e2f02c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 146075937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &849797808
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +368,12 @@ PrefabInstance:
 --- !u!1 &930908154 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4548796374399732024, guid: 4afc0e7dd19257f4c899b9552068cd82,
+    type: 3}
+  m_PrefabInstance: {fileID: 930908153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &930908163 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4548796374399732004, guid: 4afc0e7dd19257f4c899b9552068cd82,
     type: 3}
   m_PrefabInstance: {fileID: 930908153}
   m_PrefabAsset: {fileID: 0}
@@ -689,6 +701,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 45542345879286572, guid: 03b335176169f8f498676dadce4d37e1,
         type: 3}
+      propertyPath: targets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 45542345879286572, guid: 03b335176169f8f498676dadce4d37e1,
+        type: 3}
       propertyPath: players.Array.data[0]
       value: 
       objectReference: {fileID: 930908154}
@@ -697,6 +714,26 @@ PrefabInstance:
       propertyPath: players.Array.data[1]
       value: 
       objectReference: {fileID: 146075938}
+    - target: {fileID: 45542345879286572, guid: 03b335176169f8f498676dadce4d37e1,
+        type: 3}
+      propertyPath: targets.Array.data[0]
+      value: 
+      objectReference: {fileID: 930908163}
+    - target: {fileID: 45542345879286572, guid: 03b335176169f8f498676dadce4d37e1,
+        type: 3}
+      propertyPath: targets.Array.data[1]
+      value: 
+      objectReference: {fileID: 146075946}
+    - target: {fileID: 45542345879286572, guid: 03b335176169f8f498676dadce4d37e1,
+        type: 3}
+      propertyPath: offset.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 45542345879286572, guid: 03b335176169f8f498676dadce4d37e1,
+        type: 3}
+      propertyPath: smoothTime
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03b335176169f8f498676dadce4d37e1, type: 3}
 --- !u!1001 &284560674575174580

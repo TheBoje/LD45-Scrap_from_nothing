@@ -79,7 +79,6 @@ public class UIArenaScript : MonoBehaviour
             if (currCountdownValue == 2)
             {
                 beginText.text = "1";
-                Debug.Log("1!");
             }
             if (currCountdownValue == 1)
             {
