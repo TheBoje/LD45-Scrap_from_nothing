@@ -8,6 +8,8 @@ public class RobotHP : MonoBehaviour
     public float initHeal;
     public float resistance;
 
+    public bool canGetHitted = false;
+
     private void Awake()
     {
         health = initHeal ; // defition de la vie par la vie de base plus varleur armur qui s'ajoute 
@@ -15,10 +17,14 @@ public class RobotHP : MonoBehaviour
 
     public void Healt_edit(float amount)
     {
+        if (!canGetHitted)
+        {
+            return;
+        }
         health = health + amount ; // defition de la vie par la vie de base plus varleur armur qui s'ajoute
     }
     private void Update()
-    {
+    {      
         if (health <= 0.0f)
         {
             Destroy(this.gameObject);
