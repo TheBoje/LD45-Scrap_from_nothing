@@ -47,17 +47,21 @@ public class UIArenaScript : MonoBehaviour
     }
 
     public void print_life()
-    {
-        lifeP1.text = player_1.GetComponent<RobotHP>().health.ToString();
-        lifeP2.text = player_2.GetComponent<RobotHP>().health.ToString();
+    {   
+        if (player_1 != null && player_2 != null)
+        {
+            lifeP1.text = player_1.GetComponent<RobotHP>().health.ToString();
+            lifeP2.text = player_2.GetComponent<RobotHP>().health.ToString();
+        }
     }
 
     public void print_shield()
     {
-        // C'est vraiment cette valeur que je dois prendre ? J'ai peur  
-        shieldP1.text = player_1.GetComponent<RobotHP>().resistance.ToString();
-        shieldP2.text = player_2.GetComponent<RobotHP>().resistance.ToString();
-
+        if (player_1 != null && player_2 != null)
+        {
+            shieldP1.text = player_1.GetComponent<RobotHP>().resistance.ToString();
+            shieldP2.text = player_2.GetComponent<RobotHP>().resistance.ToString();
+        }
     }
 
     public IEnumerator StartCountdown(float countdownValue = 7)
@@ -96,10 +100,12 @@ public class UIArenaScript : MonoBehaviour
             {
                 TextFadeOut();
             }
-            if (currCountdownValue == 47)
+            if (currCountdownValue == 46)
             {
-                TextFadeIn();
+                Debug.Log(GetWinnerName());
                 beginText.text = GetWinnerName();
+                TextFadeIn();
+                
             }
 
 
@@ -121,7 +127,7 @@ public class UIArenaScript : MonoBehaviour
 
     public void winner()
     {
-        if(player_1.GetComponent<RobotHP>().health <= 0 || player_2.GetComponent<RobotHP>().health <= 0)
+        if(player_1 == null || player_2 == null)
         {
             StartCoroutine(StartCountdown(47));
 
@@ -130,7 +136,7 @@ public class UIArenaScript : MonoBehaviour
     }
      string GetWinnerName()
     {
-        if (player_1.GetComponent<RobotHP>().health <= 0)
+        if (player_1 == null)
         {
             return "Player 2 win !";
         }
