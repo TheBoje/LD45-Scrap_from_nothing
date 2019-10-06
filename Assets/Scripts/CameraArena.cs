@@ -14,7 +14,7 @@ public class CameraArena : MonoBehaviour
     [SerializeField] private float maxDist;
 
 
-    private void Update()
+    private void LateUpdate()
     {
         averagePos = Vector3.zero;
         foreach (GameObject g in players)

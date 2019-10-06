@@ -34,5 +34,9 @@ public class Bullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (collision.gameObject.GetComponent<RobotHP>())
+        {
+            collision.gameObject.GetComponent<RobotHP>().Healt_edit(-damage / collision.gameObject.GetComponent<RobotHP>().resistance);
+        }
     }
 }

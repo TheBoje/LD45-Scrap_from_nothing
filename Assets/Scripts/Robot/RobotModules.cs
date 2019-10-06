@@ -17,10 +17,12 @@ public class RobotModules : MonoBehaviour
     public Transform frontModulePivot;
 
     private RobotMovement rM;
+    private RobotHP rHp;
 
     private void Awake()
     {
         rM = GetComponent<RobotMovement>();
+        rHp = GetComponent<RobotHP>();
     }
 
     private void Update()
@@ -49,6 +51,12 @@ public class RobotModules : MonoBehaviour
         {
             rM.speedMulti = 1;
             rM.slerpMulti = 1;
+        }
+        if (protection)
+        {
+            protection.transform.position = frontModulePivot.position;
+            protection.transform.rotation = frontModulePivot.rotation;
+            rHp.resistance = protection.GetComponent<Protection>().defence;
         }
 
     }

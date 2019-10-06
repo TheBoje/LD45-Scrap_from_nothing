@@ -13,17 +13,14 @@ public class ItemFollow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)     // Test sur la natur de l'bojet et si il est un player alors Target le prend comme objet
     {
-        if (!collision.GetComponent<RobotMovement>().followed)
+        if (collision.tag == "Player" && !collision.GetComponent<RobotMovement>().followed)
         {
-            if (collision.tag == "Player")
-            {
                 if(Target)
                 { 
                     Target.GetComponent<RobotMovement>().followed = false;
                 }
                 Target = collision.gameObject;
                 collision.GetComponent<RobotMovement>().followed = true;
-            }
         }
         
     }

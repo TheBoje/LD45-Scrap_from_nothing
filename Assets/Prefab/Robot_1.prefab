@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 364479497516882229}
   - component: {fileID: 364479497591424710}
   - component: {fileID: 2001101464276056145}
+  - component: {fileID: 7599653325293152738}
   - component: {fileID: 364479498627499493}
   m_Layer: 0
   m_Name: Robot_1
@@ -286,6 +287,8 @@ MonoBehaviour:
   playerNumber: 0
   axisH: Horizontal
   axisV: Vertical
+  arme1Key: 101
+  arme2Key: 97
 --- !u!61 &364479497516882229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -381,6 +384,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7599653325293152738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4548796374399732024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caeb22583789b14cb96482d24d3f651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  initHeal: 100
+  resistance: 1
 --- !u!95 &364479498627499493
 Animator:
   serializedVersion: 3

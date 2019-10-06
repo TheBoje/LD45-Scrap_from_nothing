@@ -48,10 +48,11 @@ public class Workbench : MonoBehaviour
             return;
         }
         Debug.Log("Equip?");
+        Vector3 axis = player.GetComponent<RobotMovement>().input;
         //Arme
         if(modules[modules.Count - 1].GetComponent<Arme>())
         {
-            if (Input.GetKeyDown(KeyCode.D))
+            if (axis.x > 0)
             {
                 if (player.GetComponent<RobotModules>().arme1 != null)
                 {
@@ -64,7 +65,7 @@ public class Workbench : MonoBehaviour
                 player.GetComponent<RobotMovement>().followed = false;
                 modules.RemoveAt(modules.Count - 1);
             }
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (axis.x < 0)
             {
                 if (player.GetComponent<RobotModules>().arme2 != null)
                 {
@@ -79,7 +80,7 @@ public class Workbench : MonoBehaviour
             }
         }
         //Propulseur
-        if (Input.GetKeyDown(KeyCode.Z) && modules[modules.Count - 1].GetComponent<Propulseur>())
+        if (axis.y > 0 && modules[modules.Count - 1].GetComponent<Propulseur>())
         {
             if(player.GetComponent<RobotModules>().propulseur != null)
             {
@@ -93,7 +94,7 @@ public class Workbench : MonoBehaviour
             modules.RemoveAt(modules.Count - 1);
         }
         //Protection
-        if (Input.GetKeyDown(KeyCode.S) && modules[modules.Count - 1].GetComponent<Protection>())
+        if (axis.y < 0 && modules[modules.Count - 1].GetComponent<Protection>())
         {
             if (player.GetComponent<RobotModules>().protection != null)
             {

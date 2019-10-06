@@ -7,9 +7,9 @@ public class FollowPlayer : MonoBehaviour {
     public float smoothFactor = 0.1f;
     public Vector3 offset;
 
-    private void FixedUpdate () {
+    private void LateUpdate () {
         Vector3 desiredPosition = player.transform.position + offset;
-        Vector3 smoothedPosition = Vector3.Lerp (transform.position, desiredPosition, smoothFactor);
+        Vector3 smoothedPosition = Vector3.Slerp (transform.position, desiredPosition, smoothFactor);
         transform.position = smoothedPosition;
     }
 

@@ -10,8 +10,6 @@ public class RobotHP : MonoBehaviour
 
     private void Awake()
     {
-
-        initHeal = GetComponent<RobotStats>().vie;
         health = initHeal ; // defition de la vie par la vie de base plus varleur armur qui s'ajoute 
     }
 
@@ -19,16 +17,24 @@ public class RobotHP : MonoBehaviour
     {
         health = health + amount ; // defition de la vie par la vie de base plus varleur armur qui s'ajoute
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if (collision.tag == "Bullet")
+        if (health <= 0.0f)
         {
-            health -= collision.GetComponent<Bullet>().damage * 1/resistance;
+            Destroy(this.gameObject);
+        }
+    }
+    /*
+    private void OnColliderEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            Debug.Log("Hit");
+            health -= collision.gameObject.GetComponent<Bullet>().damage * 1/resistance;
             if (health <= 0.0f)
             {
                 Destroy(this.gameObject);
             }
         }
-    }
+    }*/
 }
