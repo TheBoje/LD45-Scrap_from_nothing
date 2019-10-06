@@ -6,7 +6,6 @@ public class Poubelle : MonoBehaviour
 {
 
     public GameObject player;
-
     public Transform output;
 
     [SerializeField] private float radiusDetect;
@@ -44,39 +43,50 @@ public class Poubelle : MonoBehaviour
         if (player.GetComponent<RobotModules>().arme1 != null && Input.GetKeyDown(KeyCode.D))
         {
             GameObject g = player.GetComponent<RobotModules>().arme1;
+            player.GetComponent<RobotMovement>().followed = false;
             player.GetComponent<RobotModules>().arme1 = null;
-            g.transform.position = output.position;
+            Vector3 randomVector3 = new Vector3(Random.value, Random.value, 0f);
+            g.transform.position = output.position + randomVector3;
             g.transform.parent = null;
-           // g.GetComponent<RobotMovement>().followed = false;
+            g.GetComponent<ItemFollow>().enabled = true;
+            g.GetComponent<ItemFollow>().Target = null;
 
         }
         if (player.GetComponent<RobotModules>().arme2 && Input.GetKeyDown(KeyCode.Q))
         {
             GameObject g = player.GetComponent<RobotModules>().arme2;
+            player.GetComponent<RobotMovement>().followed = false;
             player.GetComponent<RobotModules>().arme2 = null;
-            g.transform.position = output.position;
+            Vector3 randomVector3 = new Vector3(Random.value, Random.value, 0f);
+            g.transform.position = output.position + randomVector3;
             g.transform.parent = null;
-          //  g.GetComponent<RobotMovement>().followed = false;
-
+            g.GetComponent<ItemFollow>().enabled = true;
+            g.GetComponent<ItemFollow>().Target = null;
         }
         //Propulseur
         if (player.GetComponent<RobotModules>().propulseur && Input.GetKeyDown(KeyCode.Z))
         {
             GameObject g = player.GetComponent<RobotModules>().propulseur;
+            player.GetComponent<RobotMovement>().followed = false;
             player.GetComponent<RobotModules>().propulseur = null;
-            g.transform.position = output.position;
+            Vector3 randomVector3 = new Vector3(Random.value, Random.value, 0f);
+            g.transform.position = output.position + randomVector3;
             g.transform.parent = null;
-           // g.GetComponent<RobotMovement>().followed = false;
+            g.GetComponent<ItemFollow>().enabled = true;
+            g.GetComponent<ItemFollow>().Target = null;
 
         }
         //Protection
         if (player.GetComponent<RobotModules>().protection && Input.GetKeyDown(KeyCode.S))
         {
             GameObject g = player.GetComponent<RobotModules>().protection;
+            player.GetComponent<RobotMovement>().followed = false;
             player.GetComponent<RobotModules>().protection = null;
-            g.transform.position = output.position;
+            Vector3 randomVector3 = new Vector3(Random.value, Random.value, 0f);
+            g.transform.position = output.position + randomVector3;
             g.transform.parent = null;
-           // g.GetComponent<RobotMovement>().followed = false;
+            g.GetComponent<ItemFollow>().enabled = true;
+            g.GetComponent<ItemFollow>().Target = null;
         }
     }
 }

@@ -19,7 +19,7 @@ public class DurabilityScript : MonoBehaviour
     {
         if (!mod.equiped)
             return;
-        if(collision.tag == "Bullet")
+        if(collision.tag == "Bullet" && collision.GetComponent<Bullet>().owner != gameObject)
         {
             durabilité -= collision.GetComponent<Bullet>().damage;
             if(durabilité <= 0)

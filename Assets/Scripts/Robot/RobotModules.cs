@@ -45,6 +45,11 @@ public class RobotModules : MonoBehaviour
             rM.slerpMulti = propulseur.GetComponent<Propulseur>().speedRotaMultiplicator;
 
         }
+        else
+        {
+            rM.speedMulti = 1;
+            rM.slerpMulti = 1;
+        }
 
     }
     

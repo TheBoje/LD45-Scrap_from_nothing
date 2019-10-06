@@ -57,10 +57,10 @@ public class Workbench : MonoBehaviour
                 {
                     Destroy(player.GetComponent<RobotModules>().arme1.gameObject);
                 }
+                modules[modules.Count - 1].GetComponent<ItemFollow>().enabled = false;
                 player.GetComponent<RobotModules>().arme1 = modules[modules.Count - 1];
                 modules[modules.Count - 1].transform.parent = player.transform;
                 modules[modules.Count - 1].GetComponent<Module>().equiped = true;
-                modules[modules.Count - 1].GetComponent<ItemFollow>().enabled = false;
                 player.GetComponent<RobotMovement>().followed = false;
                 modules.RemoveAt(modules.Count - 1);
             }
@@ -70,10 +70,10 @@ public class Workbench : MonoBehaviour
                 {
                     Destroy(player.GetComponent<RobotModules>().arme2.gameObject);
                 }
+                modules[modules.Count - 1].GetComponent<ItemFollow>().enabled = false;
                 player.GetComponent<RobotModules>().arme2 = modules[modules.Count - 1];
                 modules[modules.Count - 1].transform.parent = player.transform;
                 modules[modules.Count - 1].GetComponent<Module>().equiped = true;
-                modules[modules.Count - 1].GetComponent<ItemFollow>().enabled = false;
                 player.GetComponent<RobotMovement>().followed = false;
                 modules.RemoveAt(modules.Count - 1);
             }
@@ -85,10 +85,10 @@ public class Workbench : MonoBehaviour
             {
                 Destroy(player.GetComponent<RobotModules>().propulseur.gameObject);
             }
+            modules[modules.Count - 1].GetComponent<ItemFollow>().enabled = false;
             player.GetComponent<RobotModules>().propulseur = modules[modules.Count - 1];
             modules[modules.Count - 1].transform.parent = player.transform;
             modules[modules.Count - 1].GetComponent<Module>().equiped = true;
-            modules[modules.Count - 1].GetComponent<ItemFollow>().enabled = false;
             player.GetComponent<RobotMovement>().followed = false;
             modules.RemoveAt(modules.Count - 1);
         }
@@ -99,10 +99,10 @@ public class Workbench : MonoBehaviour
             {
                 Destroy(player.GetComponent<RobotModules>().protection.gameObject);
             }
+            modules[modules.Count - 1].GetComponent<ItemFollow>().enabled = false;
             player.GetComponent<RobotModules>().protection = modules[modules.Count - 1];
             modules[modules.Count - 1].transform.parent = player.transform;
             modules[modules.Count - 1].GetComponent<Module>().equiped = true;
-            modules[modules.Count - 1].GetComponent<ItemFollow>().enabled = false;
             player.GetComponent<RobotMovement>().followed = false;
             modules.RemoveAt(modules.Count - 1);
         }

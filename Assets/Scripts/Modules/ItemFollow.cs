@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class ItemFollow : MonoBehaviour
 {
-
-    [SerializeField]
-    private GameObject Target;          // Ciblage du Player que l'item doit suivre 
+    
+    public GameObject Target;          // Ciblage du Player que l'item doit suivre 
     public bool Followed = false;       // Savoir si le player est suivie
     
     
