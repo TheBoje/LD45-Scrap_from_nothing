@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -943,11 +943,6 @@ PrefabInstance:
       propertyPath: m_TargetDisplay
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8958226568685544818, guid: a088e95bbf761774d826771957828852,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -8493652464985289850, guid: a088e95bbf761774d826771957828852,
         type: 3}
       propertyPath: player
@@ -958,6 +953,11 @@ PrefabInstance:
       propertyPath: smoothFactor
       value: 0.125
       objectReference: {fileID: 0}
+    - target: {fileID: 8958226568685544818, guid: a088e95bbf761774d826771957828852,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 85378995, guid: a088e95bbf761774d826771957828852, type: 3}
       propertyPath: antialiasingMode
       value: 1
@@ -966,6 +966,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 85378995, guid: a088e95bbf761774d826771957828852, type: 3}
+      propertyPath: volumeTrigger
+      value: 
+      objectReference: {fileID: 7255619831735691157}
     - target: {fileID: 1453045574, guid: a088e95bbf761774d826771957828852, type: 3}
       propertyPath: m_Name
       value: PostProcessVolume
@@ -1989,3 +1993,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a088e95bbf761774d826771957828852, type: 3}
+--- !u!4 &7255619831735691157 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4619630977176275770, guid: a088e95bbf761774d826771957828852,
+    type: 3}
+  m_PrefabInstance: {fileID: 7255619831735691156}
+  m_PrefabAsset: {fileID: 0}
