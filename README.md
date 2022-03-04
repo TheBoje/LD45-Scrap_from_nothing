@@ -34,5 +34,5 @@ Altimor : Dev / Musician
 
 ## Build
 
-- Windows : [](https://tinyurl.com/y49wp8ov)
-- MacOS : [](https://tinyurl.com/yykknlgx)
+- Windows : [https://tinyurl.com/y49wp8ov](https://tinyurl.com/y49wp8ov)
+- MacOS : [https://tinyurl.com/yykknlgx](https://tinyurl.com/yykknlgx)
