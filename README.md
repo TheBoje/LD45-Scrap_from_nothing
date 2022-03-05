@@ -16,7 +16,7 @@ When the timer is over, you just need to defeat your opponent by shooting him.
 
 Good Luck & Have Fun !
 
-## Some screenshoots
+## Some screenshots
 
 
 |![](https://static.jam.vg/raw/d3f/d1/z/2671f.png)|![](https://static.jam.vg/raw/d3f/d1/z/26756.png)|
